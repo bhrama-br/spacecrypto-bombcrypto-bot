@@ -92,10 +92,10 @@ def scroll_ships():
     global h_scroll
     global w_scroll
     use_click_and_drag_instead_of_scroll = True
-    click_and_drag_amount = 60
-    scroll_size = 60
+    click_and_drag_amount = 120
+    scroll_size = 120
 
-    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+350+(h_scroll/2),1)
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
     if not use_click_and_drag_instead_of_scroll:
         pyautogui.scroll(-scroll_size)
     else:
@@ -131,6 +131,19 @@ def ships_15_15():
             has_timed_out = time.time()-start > 3
             continue
         print('Encontrou 15-15 tela naves')
+        return True
+    return False
+
+def ships_0_15():
+    start = time.time()
+    has_timed_out = False
+    while(not has_timed_out):
+        matches = positions(env.images_space['0-15'], 0.9)
+
+        if(len(matches)==0):
+            has_timed_out = time.time()-start > 3
+            continue
+        print('Encontrou 0-15 tela naves')
         return True
     return False
 
@@ -254,7 +267,7 @@ def ship_to_fight():
     if go_to_ship():
         ship_clicks = 0
         buttonsClicked = 1
-        empty_scrolls_attempts = 4
+        empty_scrolls_attempts = 8
         while(empty_scrolls_attempts >0):
             buttonsClicked = click_fight_ship_new()
             if ships_15_15():
@@ -266,7 +279,9 @@ def ship_to_fight():
                 break    
             scroll_ships()
             time.sleep(1)
-        go_to_fight()
+        
+        if ships_0_15() == False:
+            go_to_fight()
     else:
         return
     #else:
@@ -296,7 +311,9 @@ def ship_tela_boss():
                     break
                 scroll_ships()
                 time.sleep(2)
-            go_to_fight()
+
+            if ships_0_15() == False:
+                go_to_fight()
 
 
 def login():
