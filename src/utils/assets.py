@@ -17,6 +17,8 @@ def loadHeroesImagesToHome():
     return heroes
 
 def loadImages():
+    print('>>---> Loading Images BombCrypto')
+
     file_names = listdir('./targets/')
     targets = {}
     for file in file_names:
@@ -32,12 +34,16 @@ def loadImages():
 
     
 def loadImagesSpace():
+    print('>>---> Loading Images SpaceCrypto')
     file_names = listdir('./img_compare/')
     targets = {}
     for file in file_names:
         path = 'img_compare/' + file
         target_name = string.removeSuffix(file, '.png')
         temp_image = cv2.imread(path)
-
+        if env.scale_image['enable']:
+            targets[target_name] = resizeImageForScale(temp_image, env.scale_image['percent'])
+        else:
+            targets[target_name] = temp_image
         targets[target_name] = temp_image
     return targets

@@ -1,3 +1,4 @@
+from time import sleep
 from src.utils.assets import loadImages, loadHeroesImagesToHome, loadImagesSpace
 from src.utils.config import loadConfigsFromFile
 from src.bot.logger import logger
