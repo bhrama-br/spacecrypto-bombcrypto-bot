@@ -21,6 +21,10 @@ Resolução: 1920x1080 e 1600x900
 
 1600x900 precisa está com escala 150%
 
+
+Não pode ter Pasta ou Qualquer coisa que nao seja os jogos, nome com BombCrypto ou SpaceCrypto.
+
+
 space:
   ###### True para Resolução 1920x1080, False para 1600x900
   checkResolution: False
