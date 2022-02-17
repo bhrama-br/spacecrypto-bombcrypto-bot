@@ -279,6 +279,7 @@ def ship_to_fight():
                 break    
             scroll_ships()
             time.sleep(1)
+        go_to_fight()
     else:
         return
     #else:
@@ -308,6 +309,7 @@ def ship_tela_boss():
                     break
                 scroll_ships()
                 time.sleep(2)
+            go_to_fight()
 
 
 def login():
