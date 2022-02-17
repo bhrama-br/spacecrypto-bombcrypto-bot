@@ -9,6 +9,13 @@ import src.bot.heroes as Heroes
 import src.bot.login as Auth
 import src.bot.action as Action
 import src.bot.spacecrypto as Space
+from src.utils.config import loadConfigsFromFile
+
+global space
+global cfg
+cfg = loadConfigsFromFile()
+
+space = cfg['space']
 
 def runMultiAccount():
     time.sleep(5)
@@ -20,15 +27,15 @@ def runMultiAccount():
     Log.logger('🆗 Start')
     Log.logger('Searching for windows with contains title: {}'.format(title), color='yellow')
 
-    for w in pygetwindow.getWindowsWithTitle(title):
-        windows.append({
-            "window": w,
-            "login" : 0,
-            "heroes" : 0,
-            "new_map" : 0,
-            "refresh_heroes" : 0,
-            'title': 'bomb'
-        })
+    #for w in pygetwindow.getWindowsWithTitle(title):
+    #    windows.append({
+    #        "window": w,
+    #        "login" : 0,
+    #        "heroes" : 0,
+    #        "new_map" : 0,
+    #        "refresh_heroes" : 0,
+    #        'title': 'bomb'
+    #    })
     
     for w in pygetwindow.getWindowsWithTitle('Space Crypto'):
         windows.append({
@@ -43,8 +50,8 @@ def runMultiAccount():
             "continue": 0,
 
             "check_login" : 1,
-            "check_ship_to_fight" : 10,
-            "check_ship_tela_boss": 11,
+            "check_ship_to_fight" : space['check_ship_to_fight'],
+            "check_ship_tela_boss": space['check_ship_tela_boss'],
             "check_continue": 1,
 
         })

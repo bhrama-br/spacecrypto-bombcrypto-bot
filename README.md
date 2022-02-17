@@ -15,6 +15,8 @@ https://discord.gg/ahwf3Nfd
 
 - Suporte a multiplas contas no mesmo monitor
 
+Resolução: 1920x1080
+
 # Instalação:
 
 1- Baixe e instale Python na versão maior que 3 no [site oficial](https://www.python.org/downloads/) ou através da [windows store](https://www.microsoft.com/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab).

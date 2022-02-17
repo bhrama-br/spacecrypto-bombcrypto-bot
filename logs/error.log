@@ -1,0 +1,94 @@
+Traceback (most recent call last):
+[2022-02-17 17:00:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:00:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 46, in runMultiAccount
+    "check_ship_to_fight" : space['check_ship_to_fight'],
+[2022-02-17 17:00:34] ERROR: NameError: name 'space' is not defined
+
+Traceback (most recent call last):
+[2022-02-17 17:00:44] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:00:44] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 46, in runMultiAccount
+    "check_ship_to_fight" : space['check_ship_to_fight'],
+[2022-02-17 17:00:44] ERROR: NameError: name 'space' is not defined
+
+Traceback (most recent call last):
+[2022-02-17 17:00:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:00:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 46, in runMultiAccount
+    "check_ship_to_fight" : space['check_ship_to_fight'],
+[2022-02-17 17:00:54] ERROR: NameError: name 'space' is not defined
+
+Traceback (most recent call last):
+[2022-02-17 17:01:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:01:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 46, in runMultiAccount
+    "check_ship_to_fight" : space['check_ship_to_fight'],
+[2022-02-17 17:01:04] ERROR: NameError: name 'space' is not defined
+
+Traceback (most recent call last):
+[2022-02-17 17:04:00] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:04:00] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 116, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-17 17:04:00] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 265, in ship_to_fight
+    scroll_ships()
+[2022-02-17 17:04:00] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-17 17:04:00] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-17 17:05:05] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:05:05] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 116, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-17 17:05:05] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 265, in ship_to_fight
+    scroll_ships()
+[2022-02-17 17:05:05] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-17 17:05:05] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-17 17:08:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:08:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 116, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-17 17:08:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 265, in ship_to_fight
+    scroll_ships()
+[2022-02-17 17:08:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-17 17:08:18] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-17 17:09:20] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:09:20] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 116, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-17 17:09:20] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 265, in ship_to_fight
+    scroll_ships()
+[2022-02-17 17:09:20] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-17 17:09:20] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-17 17:11:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:11:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 116, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-17 17:11:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 265, in ship_to_fight
+    scroll_ships()
+[2022-02-17 17:11:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-17 17:11:22] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-17 17:19:46] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-17 17:19:46] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 116, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-17 17:19:46] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 265, in ship_to_fight
+    scroll_ships()
+[2022-02-17 17:19:46] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-17 17:19:46] ERROR: NameError: name 'x_scroll' is not defined
+

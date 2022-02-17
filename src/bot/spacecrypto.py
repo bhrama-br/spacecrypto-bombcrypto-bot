@@ -160,20 +160,6 @@ def ships_15_15_boss():
         return True
     return False
 
-def time_is_zero():
-    start = time.time()
-    has_timed_out = False
-    while(not has_timed_out):
-        matches = positions(env.images_space['time-zero'], 0.8)
-
-        if(len(matches)==0):
-            has_timed_out = time.time()-start > 3
-            continue
-        print('Encontrou time-zero')
-        return True
-    print('Time diferente de zero')
-    return False
-
 def click_fight_ship_new():
     global x_scroll
     global y_scroll
@@ -191,16 +177,16 @@ def click_fight_ship_new():
 
     scrollCheck = positions(env.images_space['newlatter'], threshold=0.9)
 
-    for key,(x, y, w, h) in enumerate(buttons):
-        #print('key: ', key)
-        if key == 0:
-            x_scroll = x
-            y_scroll = y
-            h_scroll = h
-            w_scroll = w
-        elif key == 2:
-            y_ship_final = y
-            #print("Y ship final: ", y_ship_final)        
+    #for key,(x, y, w, h) in enumerate(buttons):
+    #    #print('key: ', key)
+    #    if key == 0:
+    #        x_scroll = x
+    #        y_scroll = y
+    #        h_scroll = h
+    #        w_scroll = w
+    #    elif key == 2:
+    #        y_ship_final = y
+    #        #print("Y ship final: ", y_ship_final)        
 
     for key,(x, y, w, h) in enumerate(scrollCheck):
         #print('key: ', key)
@@ -213,7 +199,7 @@ def click_fight_ship_new():
             y_ship_final = y
             #print("Y ship final: ", y_ship_final)    
 
-    yellow_bars = positions(env.images_space['yellow-bar-short'], threshold=0.9)
+    #yellow_bars = positions(env.images_space['yellow-bar-short'], threshold=0.9)
     #print('Yellow bars detected', len(yellow_bars))
 
     buttomFigt = positions(env.images_space['fight'], threshold=0.9)
@@ -263,11 +249,10 @@ def ship_to_fight():
 
     finish_boss()
 
-    #if time_is_zero():
     if go_to_ship():
         ship_clicks = 0
         buttonsClicked = 1
-        empty_scrolls_attempts = 8
+        empty_scrolls_attempts = env.space['qtScroll']
         while(empty_scrolls_attempts >0):
             buttonsClicked = click_fight_ship_new()
             if ships_15_15():
@@ -279,7 +264,7 @@ def ship_to_fight():
                 break    
             scroll_ships()
             time.sleep(1)
-        go_to_fight()
+        #go_to_fight()
     else:
         return
     #else:
@@ -299,7 +284,7 @@ def ship_tela_boss():
         if go_to_ship_tela_boss():
             time.sleep(5)
             buttonsClicked = 1
-            empty_scrolls_attempts = 3
+            empty_scrolls_attempts = env.space['qtScroll']
 
             while(empty_scrolls_attempts >0):
                 buttonsClicked = click_fight_ship_new()

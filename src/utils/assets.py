@@ -33,18 +33,21 @@ def loadImages():
     return targets
 
     
-def loadImagesSpace():
+def loadImagesSpace(resize):
     print('>>---> Loading Images SpaceCrypto')
-    file_names = listdir('./img_compare/')
+    if resize:
+        file_names = listdir('./img_compare/')
+    else:
+        file_names = listdir('./img_compare/1600x900/')
     targets = {}
     for file in file_names:
-        path = 'img_compare/' + file
+        if resize:
+            path = 'img_compare/' + file
+        else:
+            path = 'img_compare/1600x900/' + file
+        
         target_name = string.removeSuffix(file, '.png')
         target_name = string.removeSuffix(target_name, '.PNG')
         temp_image = cv2.imread(path)
-        if env.scale_image['enable']:
-            targets[target_name] = resizeImageForScale(temp_image, env.scale_image['percent'])
-        else:
-            targets[target_name] = temp_image
         targets[target_name] = temp_image
     return targets
