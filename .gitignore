@@ -7,11 +7,6 @@ devlog.md
 # test
 test.py
 
-# log
-/logs/new-map.log
-/logs/logger.log
-/logs/error.log
-logs/
 
 # cache
 /src/__pycache__
