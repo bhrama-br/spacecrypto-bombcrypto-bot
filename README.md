@@ -16,6 +16,11 @@ https://discord.gg/ahwf3Nfd
 - Suporte a multiplas contas no mesmo monitor
 
 Resolução: 1920x1080 e 1600x900
+
+1920x1080 precisa está com escala 100%
+
+1600x900 precisa está com escala 150%
+
 space:
   ###### True para Resolução 1920x1080, False para 1600x900
   checkResolution: False

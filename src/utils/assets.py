@@ -36,9 +36,14 @@ def loadImages():
 def loadImagesSpace(resize):
     print('>>---> Loading Images SpaceCrypto')
     if resize:
+        print('1920x1080')
+
         file_names = listdir('./img_compare/')
     else:
+        print('1600x900')
+        
         file_names = listdir('./img_compare/1600x900/')
+    
     targets = {}
     for file in file_names:
         if resize:

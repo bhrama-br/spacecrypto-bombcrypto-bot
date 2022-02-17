@@ -46,7 +46,7 @@ def runMultiAccount():
             "ship" : 0,
             "fight" : 0,
             "fight_boss" : 0,
-            "ship_tela_boss": 0,
+            "ship_tela_boss": time.time(),
             "continue": 0,
 
             "check_login" : 1,
