@@ -264,7 +264,7 @@ def ship_to_fight():
                 break    
             scroll_ships()
             time.sleep(1)
-        #go_to_fight()
+        go_to_fight()
     else:
         return
     #else:
