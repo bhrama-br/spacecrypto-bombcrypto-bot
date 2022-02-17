@@ -1,4 +1,4 @@
-# SpaceCryto And Bombcrypto Bot - MultiScreen
+# SpaceCrypto And Bombcrypto Bot - MultiScreen
 This is a open source project inspired on bombcrypto-bot that was a success auto click bot that helped me a lot.
 
 So, I decided to create a new auto click bot for the new NFT game space crypto. (It is not soo easy) I hope you like
