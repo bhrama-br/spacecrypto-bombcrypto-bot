@@ -7,6 +7,10 @@ To maintain the improvments and this auto click bot free, please help me with an
 
 Metamask wallet (BNB/SPG/BUSD/BCOIN): 0xa5e1412B4dBf4bE9Fb3f52b12aBFF7A78272B9b3
 
+
+CANAL DISCORD
+https://discord.gg/ahwf3Nfd
+
 ## Funções extras adicionadas
 
 - Suporte a multiplas contas no mesmo monitor
