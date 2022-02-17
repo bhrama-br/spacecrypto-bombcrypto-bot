@@ -224,6 +224,9 @@ def click_fight_ship_new():
         #print("Entrou for x y w h. Y:", y)
         #moveToWithRandomness(x+offset_x+(w/2),y+(h/2),1)
         if len(not_working_green_bars) > 0 :
+            if ships_15_15():
+                return len(not_working_green_bars)
+
             for i in range(len(not_working_green_bars)):
                 #pyautogui.click()
                 clickBtn(env.images_space['fight'])
@@ -254,10 +257,11 @@ def ship_to_fight():
         empty_scrolls_attempts = 4
         while(empty_scrolls_attempts >0):
             buttonsClicked = click_fight_ship_new()
+            if ships_15_15():
+                break 
             if buttonsClicked == 0:
                 empty_scrolls_attempts = empty_scrolls_attempts - 1
-            if ships_15_15():
-                break            
+                       
             if ship_clicks > 15:
                 break    
             scroll_ships()

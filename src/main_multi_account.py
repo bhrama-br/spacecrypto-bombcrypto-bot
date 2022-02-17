@@ -20,15 +20,15 @@ def runMultiAccount():
     Log.logger('🆗 Start')
     Log.logger('Searching for windows with contains title: {}'.format(title), color='yellow')
 
-    for w in pygetwindow.getWindowsWithTitle(title):
-        windows.append({
-            "window": w,
-            "login" : 0,
-            "heroes" : 0,
-            "new_map" : 0,
-            "refresh_heroes" : 0,
-            'title': 'bomb'
-        })
+    #for w in pygetwindow.getWindowsWithTitle(title):
+    #    windows.append({
+    #        "window": w,
+    #        "login" : 0,
+    #        "heroes" : 0,
+    #        "new_map" : 0,
+    #        "refresh_heroes" : 0,
+    #        'title': 'bomb'
+    #    })
     
     for w in pygetwindow.getWindowsWithTitle('Space Crypto'):
         windows.append({
@@ -44,7 +44,7 @@ def runMultiAccount():
 
             "check_login" : 1,
             "check_ship_to_fight" : 10,
-            "check_ship_tela_boss": 8,
+            "check_ship_tela_boss": 11,
             "check_continue": 1,
 
         })
@@ -102,13 +102,13 @@ def runMultiAccount():
                     Space.login()
 
 
-                if actual_time - last["ship_to_fight"] > last['check_ship_to_fight']:
+                if actual_time - last["ship_to_fight"] > addRandomness(last['check_ship_to_fight'] * 60):
                     Action.activeWindow()
                     last["ship_to_fight"] = actual_time
                     print("Ship to fight")
                     Space.ship_to_fight()
                 
-                if actual_time - last["ship_tela_boss"] > last['check_ship_tela_boss']:
+                if actual_time - last["ship_tela_boss"] > addRandomness(last['check_ship_tela_boss'] * 60):
                     Action.activeWindow()
                     last["ship_tela_boss"] = actual_time
                     print("Ship tela boss")
