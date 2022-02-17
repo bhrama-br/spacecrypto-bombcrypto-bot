@@ -20,15 +20,15 @@ def runMultiAccount():
     Log.logger('🆗 Start')
     Log.logger('Searching for windows with contains title: {}'.format(title), color='yellow')
 
-    #for w in pygetwindow.getWindowsWithTitle(title):
-    #    windows.append({
-    #        "window": w,
-    #        "login" : 0,
-    #        "heroes" : 0,
-    #        "new_map" : 0,
-    #        "refresh_heroes" : 0,
-    #        'title': 'bomb'
-    #    })
+    for w in pygetwindow.getWindowsWithTitle(title):
+        windows.append({
+            "window": w,
+            "login" : 0,
+            "heroes" : 0,
+            "new_map" : 0,
+            "refresh_heroes" : 0,
+            'title': 'bomb'
+        })
     
     for w in pygetwindow.getWindowsWithTitle('Space Crypto'):
         windows.append({
