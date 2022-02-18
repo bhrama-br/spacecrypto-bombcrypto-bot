@@ -1,6 +1,6 @@
 import time
 import sys
-import pygetwindow
+import pygetwindowmp as pygetwindow
 
 from src.utils.number import addRandomness
 import src.bot.logger as Log
@@ -18,44 +18,61 @@ cfg = loadConfigsFromFile()
 space = cfg['space']
 
 def runMultiAccount():
-    time.sleep(5)
     intervals = env.cfg['time_intervals']
+    time.sleep(3)
 
     windows = []
-    title = env.multi_account_same_monitor['window_contains_title']
+    titlesBomb = []
+    titlesSpace = []
 
     Log.logger('🆗 Start')
-    Log.logger('Searching for windows with contains title: {}'.format(title), color='yellow')
+    Log.logger('Searching for windows with contains ', color='yellow')
 
-    for w in pygetwindow.getWindowsWithTitle(title):
-        windows.append({
-            "window": w,
-            "login" : 0,
-            "heroes" : 0,
-            "new_map" : 0,
-            "refresh_heroes" : 0,
-            'title': 'bomb'
-        })
+    title_bomb = env.multi_account_same_monitor['window_contains_title']
+    title_space = 'Space Crypto -'
+
+    alltitles = pygetwindow.getAllTitles()
+
     
-    for w in pygetwindow.getWindowsWithTitle('Space Crypto'):
-        windows.append({
-            "window": w,
-            "login" : 0,
-            "title": 'space',
-            "isOne": 0,
-            "ship_to_fight" : 0,
-            "ship" : 0,
-            "fight" : 0,
-            "fight_boss" : 0,
-            "ship_tela_boss": time.time(),
-            "continue": 0,
+    for t in alltitles:
+        if title_bomb in t:
+            titlesBomb.append(t)
+        if title_space in t:
+            titlesSpace.append(t)
 
-            "check_login" : 1,
-            "check_ship_to_fight" : space['check_ship_to_fight'],
-            "check_ship_tela_boss": space['check_ship_tela_boss'],
-            "check_continue": 1,
+    titlesBomb = set(titlesBomb)
+    titlesSpace = set(titlesSpace)
+    
+    for i in titlesBomb:
+        for w in pygetwindow.getWindowsWithTitle(i):
+            windows.append({
+                "window": w,
+                "login" : 0,
+                "heroes" : 0,
+                "new_map" : 0,
+                "refresh_heroes" : 0,
+                'title': 'bomb'
+            })
+    for i in titlesSpace:
+        for w in pygetwindow.getWindowsWithTitle(i):
+            windows.append({
+                "window": w,
+                "login" : 0,
+                "title": 'space',
+                "isOne": 0,
+                "ship_to_fight" : 0,
+                "ship" : 0,
+                "fight" : 0,
+                "fight_boss" : 0,
+                "ship_tela_boss": time.time(),
+                "continue": 0,
 
-        })
+                "check_login" : 1,
+                "check_ship_to_fight" : space['check_ship_to_fight'],
+                "check_ship_tela_boss": space['check_ship_tela_boss'],
+                "check_continue": 1,
+
+            })
 
     Log.logger('Found {} window(s):'.format(len(windows)), color='cyan')
     for index, last in enumerate(windows):

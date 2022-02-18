@@ -4,7 +4,8 @@ import numpy as np
 import pyautogui
 import time
 
-import pygetwindow
+import pygetwindowmp as pygetwindow
+
 
 import src.bot.logger as Log
 import src.env as env
