@@ -217,9 +217,9 @@ debug:
 
 space:
   ###### True para Resolução 1920x1080, False para 1600x900
-  checkResolution: False
-  ######
+  checkResolution: True
+
   check_ship_to_fight: 20
   check_ship_tela_boss: 21
   # ate 15 naves 8 scroll, 20 naves 10 scroll... Pode aumentar ate ver se esta bem!
-  qtScroll: 8
+  qtScroll: 7

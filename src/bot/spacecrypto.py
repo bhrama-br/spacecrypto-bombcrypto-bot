@@ -72,7 +72,7 @@ def printSreen():
         sct_img = np.array(sct.grab(monitor))
         return sct_img[:,:,:3]
 
-def positions(target, threshold=0.8,img = None):
+def positions(target, threshold=0.8, img = None):
     if img is None:
         img = printSreen()
     result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
@@ -92,8 +92,8 @@ def scroll_ships():
     global h_scroll
     global w_scroll
     use_click_and_drag_instead_of_scroll = True
-    click_and_drag_amount = 120
-    scroll_size = 120
+    click_and_drag_amount = 220
+    scroll_size = 220
 
     moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
     if not use_click_and_drag_instead_of_scroll:
@@ -125,7 +125,7 @@ def ships_15_15():
     start = time.time()
     has_timed_out = False
     while(not has_timed_out):
-        matches = positions(env.images_space['15-15-boss'], 0.9)
+        matches = positions(env.images_space['15-15-boss'], 1)
 
         if(len(matches)==0):
             has_timed_out = time.time()-start > 3
@@ -135,23 +135,18 @@ def ships_15_15():
     return False
 
 def ships_0_15():
-    start = time.time()
-    has_timed_out = False
-    while(not has_timed_out):
-        matches = positions(env.images_space['0-15'], 0.9)
+    matches = positions(env.images_space['0-15'], 0.8)
 
-        if(len(matches)==0):
-            has_timed_out = time.time()-start > 3
-            continue
+    if(len(matches)==0):
         print('Encontrou 0-15 tela naves')
-        return True
-    return False
+        return False
+    return True
 
 def ships_15_15_boss():
     start = time.time()
     has_timed_out = False
     while(not has_timed_out):
-        matches = positions(env.images_space['15-15-boss'], 0.9)
+        matches = positions(env.images_space['15-15-boss'], 1)
 
         if(len(matches)==0):
             has_timed_out = time.time()-start > 3
@@ -267,7 +262,7 @@ def ship_to_fight():
     if go_to_ship():
         ship_clicks = 0
         buttonsClicked = 1
-        empty_scrolls_attempts = 8
+        empty_scrolls_attempts = env.space['qtScroll']
         while(empty_scrolls_attempts >0):
             buttonsClicked = click_fight_ship_new()
             if ships_15_15():
@@ -299,7 +294,8 @@ def ship_tela_boss():
         if go_to_ship_tela_boss():
             time.sleep(5)
             buttonsClicked = 1
-            empty_scrolls_attempts = 3
+            empty_scrolls_attempts = env.space['qtScroll']
+
 
             while(empty_scrolls_attempts >0):
                 buttonsClicked = click_fight_ship_new()
@@ -309,6 +305,7 @@ def ship_tela_boss():
                     break
                 scroll_ships()
                 time.sleep(2)
+            
             go_to_fight()
 
 
@@ -318,22 +315,32 @@ def login():
     go_to_continue()
     verify_error()
 
-    if clickBtn(env.images_space['connect-wallet'], timeout = 10):
-        print('Connect wallet encontrado')
-        verify_error()
+    victory_boss()
 
-    if clickBtn(env.images_space['sign'], timeout=8):
-        print('Sign button encontrado')
-        
-        if clickBtn(env.images_space['play'], timeout = 15):
-            print('Botao play encontrado')
-            print('''Jogo iniciado com sucesso!!
+    loginButton = positions(env.images_space['connect-wallet'], threshold=0.9)
+    if len(loginButton)!=0 :
+        if clickBtn(env.images_space['connect-wallet'], timeout = 10):
+            print('Connect wallet encontrado')
+            verify_error()
 
-            ''')
-            login_attempts = 0
-        return
+        if clickBtn(env.images_space['sign'], timeout=8):
+            print('Sign button encontrado')
+            
+            if clickBtn(env.images_space['play'], timeout = 15):
+                print('Botao play encontrado')
+                print('''Jogo iniciado com sucesso!!
 
+                ''')
+                login_attempts = 0
+            return
+    return
 
+def victory_boss():
+    victory = positions(env.images_space['victory'], threshold=0.9)
+    if len(victory)!=0 :
+        print('Victory Success!')
+        clickBtn(env.images_space['victory-button'])
+        time.sleep(0.8)
 
 def verify_error():
     if clickBtn(env.images_space['error'], timeout = 8):
