@@ -188,3 +188,347 @@ Traceback (most recent call last):
     raise FailSafeException(
 [2022-02-17 19:08:37] ERROR: pyautogui.FailSafeException: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
 
+Traceback (most recent call last):
+[2022-02-18 10:32:49] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 107, in activeWindow
+    env.window_object.activate()
+[2022-02-18 10:32:49] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 10:32:49] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 10:32:49] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+[2022-02-18 10:32:49] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-18 10:32:49] ERROR: Traceback (most recent call last):
+[2022-02-18 10:32:49] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:32:49] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 77, in runMultiAccount
+    Action.activeWindow()
+[2022-02-18 10:32:49] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 110, in activeWindow
+    env.window_object.activate()
+[2022-02-18 10:32:49] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 10:32:49] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 10:32:49] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+
+Traceback (most recent call last):
+[2022-02-18 10:34:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:34:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:34:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:34:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:34:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:34:34] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:34:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:34:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:34:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:34:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:34:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:34:54] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:35:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:35:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:35:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:35:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:35:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:35:14] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:35:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:35:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:35:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:35:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:35:34] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:35:34] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:35:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:35:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:35:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:35:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:35:54] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:35:54] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:36:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:36:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:36:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:36:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:36:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:36:14] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:36:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:36:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:36:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:36:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:36:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:36:35] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:36:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:36:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:36:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:36:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:36:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:36:55] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:37:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:37:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:37:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:37:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:37:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:37:15] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:37:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:37:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:37:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:37:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:37:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:37:35] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:37:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:37:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:37:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:37:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:37:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:37:55] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:38:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:38:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:38:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:38:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:38:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:38:15] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:38:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:38:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:38:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:38:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:38:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:38:35] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:38:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:38:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:38:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:38:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:38:55] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:38:55] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:39:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:39:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:39:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:39:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:39:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:39:15] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:39:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:39:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 80, in runMultiAccount
+    Auth.login()
+[2022-02-18 10:39:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-18 10:39:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 33, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-18 10:39:35] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 71, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-18 10:39:35] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-18 10:56:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 107, in activeWindow
+    env.window_object.activate()
+[2022-02-18 10:56:15] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 10:56:15] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 10:56:15] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+[2022-02-18 10:56:15] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-18 10:56:15] ERROR: Traceback (most recent call last):
+[2022-02-18 10:56:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 10:56:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 77, in runMultiAccount
+    Action.activeWindow()
+[2022-02-18 10:56:15] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 110, in activeWindow
+    env.window_object.activate()
+[2022-02-18 10:56:15] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 10:56:15] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 10:56:15] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+
+Traceback (most recent call last):
+[2022-02-18 11:04:25] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 107, in activeWindow
+    env.window_object.activate()
+[2022-02-18 11:04:25] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 11:04:25] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 11:04:25] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+[2022-02-18 11:04:25] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-18 11:04:25] ERROR: Traceback (most recent call last):
+[2022-02-18 11:04:25] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 11:04:25] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 78, in runMultiAccount
+    Action.activeWindow()
+[2022-02-18 11:04:25] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 110, in activeWindow
+    env.window_object.activate()
+[2022-02-18 11:04:25] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 11:04:25] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 11:04:25] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+
+Traceback (most recent call last):
+[2022-02-18 11:04:40] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 107, in activeWindow
+    env.window_object.activate()
+[2022-02-18 11:04:40] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 11:04:40] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 11:04:40] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+[2022-02-18 11:04:40] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-18 11:04:40] ERROR: Traceback (most recent call last):
+[2022-02-18 11:04:40] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 11:04:40] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 78, in runMultiAccount
+    Action.activeWindow()
+[2022-02-18 11:04:40] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 110, in activeWindow
+    env.window_object.activate()
+[2022-02-18 11:04:40] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 11:04:40] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 11:04:40] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+
+Traceback (most recent call last):
+[2022-02-18 11:11:41] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 107, in activeWindow
+    env.window_object.activate()
+[2022-02-18 11:11:41] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 11:11:41] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 11:11:41] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+[2022-02-18 11:11:41] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-18 11:11:41] ERROR: Traceback (most recent call last):
+[2022-02-18 11:11:41] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-18 11:11:41] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 78, in runMultiAccount
+    Action.activeWindow()
+[2022-02-18 11:11:41] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 110, in activeWindow
+    env.window_object.activate()
+[2022-02-18 11:11:41] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 246, in activate
+    _raiseWithLastError()
+[2022-02-18 11:11:41] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindow\_pygetwindow_win.py", line 99, in _raiseWithLastError
+    raise PyGetWindowException('Error code from Windows: %s - %s' % (errorCode, _formatMessage(errorCode)))
+[2022-02-18 11:11:41] ERROR: pygetwindow.PyGetWindowException: Error code from Windows: 0 - A operação foi concluída com êxito.
+

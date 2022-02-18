@@ -251,11 +251,11 @@ def click_fight_ship_new():
     return len(not_working_green_bars)
 
        
-def ship_to_fight():    
+def ship_to_fight(isOne):    
     global ship_clicks
     go_to_continue()
     verify_error()
-
+    
     finish_boss()
 
     #if time_is_zero():
