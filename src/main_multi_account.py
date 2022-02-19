@@ -43,16 +43,16 @@ def runMultiAccount():
     titlesBomb = set(titlesBomb)
     titlesSpace = set(titlesSpace)
     
-    #for i in titlesBomb:
-    #    for w in pygetwindow.getWindowsWithTitle(i):
-    #        windows.append({
-    #            "window": w,
-    #            "login" : 0,
-    #            "heroes" : 0,
-    #            "new_map" : 0,
-    #            "refresh_heroes" : 0,
-    #            'title': 'bomb'
-    #        })
+    for i in titlesBomb:
+        for w in pygetwindow.getWindowsWithTitle(i):
+            windows.append({
+                "window": w,
+                "login" : 0,
+                "heroes" : 0,
+                "new_map" : 0,
+                "refresh_heroes" : 0,
+                'title': 'bomb'
+            })
     for i in titlesSpace:
         for w in pygetwindow.getWindowsWithTitle(i):
             windows.append({
