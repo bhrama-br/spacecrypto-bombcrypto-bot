@@ -146,7 +146,8 @@ def runMultiAccount():
                     Action.activeWindow()
                     last["continue"] = actual_time
                     print("Ship continue")
-                    Space.go_to_continue()        
+                    Space.go_to_continue()
+                    Space.if_surrender()     
 
                 
 
