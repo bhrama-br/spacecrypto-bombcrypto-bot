@@ -181,7 +181,7 @@ def click_fight_ship_new():
 
     green_bars = positions(env.images_space['blue-bar-short'], threshold=0.9)
     #print('Blue bars detected', len(green_bars))
-    buttons = positions(env.images_space['fight'], threshold=0.9)
+    buttons = positions(env.images_space['fight'], threshold=1)
     #print('Buttons fight detected', len(buttons))
 
     scrollCheck = positions(env.images_space['newlatter'], threshold=0.9)
