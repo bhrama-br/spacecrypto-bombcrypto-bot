@@ -14,6 +14,12 @@ https://discord.gg/ahwf3Nfd
 ## Funções extras adicionadas
 
 - Suporte a multiplas contas no mesmo monitor
+- Todas funções para o bombcrypto
+###### SpaceCrypto
+- Fazer login.
+- Refresh ao encontrar a mensagem de error
+- Colocar naves para trabalhar
+- Fazer surrender no boss que desejar.
 
 Resolução: 1920x1080 e 1600x900
 
@@ -67,3 +73,20 @@ Você pode configurar algumas opções alterando o arquivo `config.yaml` na past
 
 - Você pode configurar a velocidade com que o mouse se move na tela antes da realização do click.
   > O valor deve ser de: `0.1` a `1`
+
+
+
+# How to works?
+The bot doesn't change any of the game's source code, it just takes a screenshot of the game's screen to find the buttons and simulates mouse movements.
+
+#  Adjusting the bot
+
+**Why some adjustments might be necessary?**
+
+The bot uses image recognition to make decisions and move the mouse and click in the right places.
+It accomplishes this by comparing an example image with a screenshot of the computer/laptop screen.
+This method is subject to inconsistencies due to differences in your screen resolution and how the game is rendered on your computer.
+It's likely that the bot doesn't work 100% on the first run, and you need to make some adjustments to the config file.
+
+# Image Replacement
+The images were taken on my computer with a resolution of 1920x1080. To replace an image that is not being recognized correctly, just find the corresponding image in the "targets" folder for BombCrypto and "img_compare" for SpaceCrypto, take a screenshot of the same area and replace the previous image. It is important that the replacement has the same name, including the .png extension.

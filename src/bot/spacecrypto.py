@@ -317,6 +317,8 @@ def login():
 
     victory_boss()
 
+    if_surrender()
+
     loginButton = positions(env.images_space['connect-wallet'], threshold=0.9)
     if len(loginButton)!=0 :
         if clickBtn(env.images_space['connect-wallet'], timeout = 10):
@@ -334,6 +336,95 @@ def login():
                 login_attempts = 0
             return
     return
+
+
+def if_surrender():
+    boss_3 = positions(env.images_space['boss-3'], threshold=1)
+    boss_4 = positions(env.images_space['boss-3'], threshold=1)
+    boss_5 = positions(env.images_space['boss-5'], threshold=1)
+    boss_6 = positions(env.images_space['boss-6'], threshold=1)
+    boss_7 = positions(env.images_space['boss-7'], threshold=1)
+    boss_8 = positions(env.images_space['boss-8'], threshold=1)
+    boss_9 = positions(env.images_space['boss-9'], threshold=1)
+    boss_10 = positions(env.images_space['boss-10'], threshold=1)
+    boss_11 = positions(env.images_space['boss-11'], threshold=1)
+    boss_12 = positions(env.images_space['boss-12'], threshold=1)
+
+    if env.space['surrender_boss'] == 3:
+        print('Surrender BOSS 3')
+        if len(boss_3) != 0 or len(boss_4) != 0 or len(boss_5) != 0 or len(boss_6) != 0 or len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+
+    if env.space['surrender_boss'] == 4:
+        print('Surrender BOSS 4')
+        if len(boss_4) != 0 or len(boss_5) != 0 or len(boss_6) != 0 or len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+        
+    if env.space['surrender_boss'] == 5:
+        print('Surrender BOSS 5')
+        if len(boss_5) != 0 or len(boss_6) != 0 or len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+    
+    if env.space['surrender_boss'] == 6:
+        print('Surrender BOSS 6')
+        if len(boss_6) != 0 or len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+    
+    if env.space['surrender_boss'] == 7:
+        print('Surrender BOSS 7')
+        if len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+    
+    if env.space['surrender_boss'] == 8:
+        print('Surrender BOSS 8')
+        if len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+    
+    if env.space['surrender_boss'] == 9:
+        print('Surrender BOSS 9')
+        if len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+    
+    if env.space['surrender_boss'] == 10:
+        print('Surrender BOSS 10')
+        if len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+    
+    if env.space['surrender_boss'] == 11:
+        print('Surrender BOSS 11')
+        if len(boss_11) != 0 or len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+    
+    if env.space['surrender_boss'] == 12:
+        print('Surrender BOSS 12')
+        if len(boss_12) != 0:
+            print('Encontrou o boss')
+            surrender()
+    
+def surrender():
+    print('Surrender Success')
+    button_surrender = positions(env.images_space['surrender'], threshold=0.9)
+    if len(button_surrender) != 0:
+        clickBtn(env.images_space['surrender'])
+        print('Click surrender')
+        time.sleep(1)
+
+def confirm_surrender():
+    print('Confirm Surrender')
+    button_surrender = positions(env.images_space['confirm-surrender'], threshold=0.9)
+    if len(button_surrender) != 0:
+        clickBtn(env.images_space['confirm-surrender'])
+        print('Click confirm surrender')
+        time.sleep(0.8)
 
 def victory_boss():
     victory = positions(env.images_space['victory'], threshold=0.9)

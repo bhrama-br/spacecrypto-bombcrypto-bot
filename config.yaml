@@ -216,10 +216,22 @@ debug:
 
 
 space:
-  ###### True para Resolução 1920x1080, False para 1600x900
+  ###PT### True para Resolução 1920x1080, False para 1600x900
+  ###EN### True for Resolution 1920x1080, False for Resolution 1600x900
   checkResolution: True
 
+  ###PT### Tempo para colocar as naves para trabalhar
+  ###EN### Time to put the ships to work
   check_ship_to_fight: 30
+
+  ###PT### Tempo para retirar e colocar novas naves para trabalhar
+  ###EN### Time to withdraw and put new ships to work
   check_ship_tela_boss: 31
-  # ate 15 naves 8 scroll, 20 naves 10 scroll... Pode aumentar ate ver se esta bem!
+  
+  ###PT### Quantidade de scroll nas naves
+  ###EN### Amount of scroll on ships
   qtScroll: 7
+
+  # Surrender 3 to 12 need alter Images.
+  # Default 0, Won't surrender.
+  surrender_boss: 0
