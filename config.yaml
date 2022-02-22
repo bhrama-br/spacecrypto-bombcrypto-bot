@@ -222,11 +222,7 @@ space:
 
   ###PT### Tempo para colocar as naves para trabalhar
   ###EN### Time to put the ships to work
-  check_ship_to_fight: 30
-
-  ###PT### Tempo para retirar e colocar novas naves para trabalhar
-  ###EN### Time to withdraw and put new ships to work
-  check_ship_tela_boss: 31
+  refresh_ships: 20
   
   ###PT### Quantidade de scroll nas naves
   ###EN### Amount of scroll on ships
@@ -234,4 +230,4 @@ space:
 
   # Surrender 3 to 12 need alter Images.
   # Default 0, Won't surrender.
-  surrender_boss: 0
+  surrender_boss: 8

@@ -34,3 +34,78 @@ Traceback (most recent call last):
     win32gui.SetForegroundWindow(self._hWnd)
 [2022-02-18 22:35:56] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
 
+Traceback (most recent call last):
+[2022-02-20 03:37:31] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-20 03:37:31] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-20 03:37:31] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-20 03:37:31] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-20 03:37:31] ERROR: Traceback (most recent call last):
+[2022-02-20 03:37:31] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-20 03:37:31] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 106, in runMultiAccount
+    Action.activeWindow()
+[2022-02-20 03:37:31] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-20 03:37:31] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-20 03:37:31] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-22 08:42:07] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-22 08:42:07] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 133, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-22 08:42:07] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 288, in ship_to_fight
+    buttonsClicked = click_fight_ship_new()
+[2022-02-22 08:42:07] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 184, in click_fight_ship_new
+    life_max_values = [_image.get_compare_result(screen_img, _image.TARGETS[bar]).max() for bar in ship_bar]
+[2022-02-22 08:42:07] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 184, in <listcomp>
+    life_max_values = [_image.get_compare_result(screen_img, _image.TARGETS[bar]).max() for bar in ship_bar]
+[2022-02-22 08:42:07] ERROR: TypeError: list indices must be integers or slices, not str
+
+Traceback (most recent call last):
+[2022-02-22 08:53:29] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-22 08:53:29] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 133, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-22 08:53:29] ERROR: TypeError: ship_to_fight() missing 1 required positional argument: 'isOne'
+
+Traceback (most recent call last):
+[2022-02-22 08:53:56] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-22 08:53:56] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 133, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-22 08:53:56] ERROR: TypeError: ship_to_fight() missing 1 required positional argument: 'isOne'
+
+Traceback (most recent call last):
+[2022-02-22 08:54:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-22 08:54:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 133, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-22 08:54:22] ERROR: TypeError: ship_to_fight() missing 1 required positional argument: 'isOne'
+
+Traceback (most recent call last):
+[2022-02-22 15:54:41] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-22 15:54:41] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 97, in runMultiAccount
+    Auth.login()
+[2022-02-22 15:54:41] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 40, in login
+    if clickBtn(env.images['connect-wallet'], name='connectWalletBtn', timeout = 10):
+[2022-02-22 15:54:41] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 47, in clickBtn
+    moveToWithRandomness(pos_click_x,pos_click_y)
+[2022-02-22 15:54:41] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 26, in moveToWithRandomness
+    pyautogui.moveTo(addRandomness(pos_x,10),addRandomness(pos_y,10),t+random()/2)
+[2022-02-22 15:54:41] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pyautogui\__init__.py", line 598, in wrapper
+    returnVal = wrappedFunction(*args, **kwargs)
+[2022-02-22 15:54:41] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pyautogui\__init__.py", line 1283, in moveTo
+    _mouseMoveDrag("move", x, y, 0, 0, duration, tween)
+[2022-02-22 15:54:41] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pyautogui\__init__.py", line 1499, in _mouseMoveDrag
+    failSafeCheck()
+[2022-02-22 15:54:41] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pyautogui\__init__.py", line 1722, in failSafeCheck
+    raise FailSafeException(
+[2022-02-22 15:54:41] ERROR: pyautogui.FailSafeException: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
+

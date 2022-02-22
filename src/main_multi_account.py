@@ -57,8 +57,7 @@ def runMultiAccount():
                 "continue": 0,
 
                 "check_login" : 1,
-                "check_ship_to_fight" : space['check_ship_to_fight'],
-                "check_ship_tela_boss": space['check_ship_tela_boss'],
+                "check_ship_to_fight" : space['refresh_ships'],
                 "check_continue": 1,
 
             })
@@ -131,15 +130,7 @@ def runMultiAccount():
                     Action.activeWindow()
                     last["ship_to_fight"] = actual_time
                     print("Ship to fight")
-                    Space.ship_to_fight(last["isOne"])
-                    if last["isOne"] == 0:
-                        last["isOne"] = 1
-
-                if actual_time - last["ship_tela_boss"] > addRandomness(last['check_ship_tela_boss'] * 60):
-                    Action.activeWindow()
-                    last["ship_tela_boss"] = actual_time
-                    print("Ship tela boss")
-                    Space.ship_tela_boss()
+                    Space.ship_to_fight()
 
                 
                 if actual_time - last["continue"] > last['check_continue']:

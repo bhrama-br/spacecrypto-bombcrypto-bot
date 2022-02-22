@@ -174,28 +174,7 @@ def click_fight_ship_new():
     global y_scroll
     global h_scroll
     global w_scroll
-
-    offset_x = 180
-    offset_y = 90
-    y_ship_final = 0
-
-    green_bars = positions(env.images_space['blue-bar-short'], threshold=0.9)
-    #print('Blue bars detected', len(green_bars))
-    buttons = positions(env.images_space['fight'], threshold=1)
-    #print('Buttons fight detected', len(buttons))
-
-    scrollCheck = positions(env.images_space['newlatter'], threshold=0.9)
-
-    for key,(x, y, w, h) in enumerate(buttons):
-        #print('key: ', key)
-        if key == 0:
-            x_scroll = x
-            y_scroll = y
-            h_scroll = h
-            w_scroll = w
-        elif key == 2:
-            y_ship_final = y
-            #print("Y ship final: ", y_ship_final)        
+    scrollCheck = positions(env.images_space['newlatter'], threshold=0.9)       
 
     for key,(x, y, w, h) in enumerate(scrollCheck):
         #print('key: ', key)
@@ -203,23 +182,11 @@ def click_fight_ship_new():
             x_scroll = x
             y_scroll = y
             h_scroll = h
-            w_scroll = w
-        elif key == 2:
-            y_ship_final = y
-            #print("Y ship final: ", y_ship_final)    
+            w_scroll = w   
 
-    yellow_bars = positions(env.images_space['yellow-bar-short'], threshold=0.9)
-    #print('Yellow bars detected', len(yellow_bars))
-
-    buttomFigt = positions(env.images_space['fight'], threshold=0.9)
+    buttomFight = positions(env.images_space['fight'], threshold=0.9)
     not_working_green_bars = []
-    #for bar in green_bars:
-    #    not_working_green_bars.append(bar)
-    #for bar in yellow_bars:
-    #    not_working_green_bars.append(bar)
-
-        
-    for bar in buttomFigt:
+    for bar in buttomFight:
         not_working_green_bars.append(bar)
 
         
@@ -229,8 +196,6 @@ def click_fight_ship_new():
 
     ship_clicks_cnt = 0
     for (x, y, w, h) in not_working_green_bars:
-        #print("Entrou for x y w h. Y:", y)
-        #moveToWithRandomness(x+offset_x+(w/2),y+(h/2),1)
         if len(not_working_green_bars) > 0 :
             if ships_15_15():
                 return len(not_working_green_bars)
@@ -251,7 +216,7 @@ def click_fight_ship_new():
     return len(not_working_green_bars)
 
        
-def ship_to_fight(isOne):    
+def ship_to_fight():    
     global ship_clicks
     go_to_continue()
     verify_error()
@@ -339,16 +304,16 @@ def login():
 
 
 def if_surrender():
-    boss_3 = positions(env.images_space['boss-3'], threshold=1)
-    boss_4 = positions(env.images_space['boss-3'], threshold=1)
-    boss_5 = positions(env.images_space['boss-5'], threshold=1)
-    boss_6 = positions(env.images_space['boss-6'], threshold=1)
-    boss_7 = positions(env.images_space['boss-7'], threshold=1)
-    boss_8 = positions(env.images_space['boss-8'], threshold=1)
-    boss_9 = positions(env.images_space['boss-9'], threshold=1)
-    boss_10 = positions(env.images_space['boss-10'], threshold=1)
-    boss_11 = positions(env.images_space['boss-11'], threshold=1)
-    boss_12 = positions(env.images_space['boss-12'], threshold=1)
+    boss_3 = positions(env.images_space['boss-3'], threshold=0.9)
+    boss_4 = positions(env.images_space['boss-3'], threshold=0.9)
+    boss_5 = positions(env.images_space['boss-5'], threshold=0.9)
+    boss_6 = positions(env.images_space['boss-6'], threshold=0.9)
+    boss_7 = positions(env.images_space['boss-7'], threshold=0.9)
+    boss_8 = positions(env.images_space['boss-8'], threshold=0.9)
+    boss_9 = positions(env.images_space['boss-9'], threshold=0.9)
+    boss_10 = positions(env.images_space['boss-10'], threshold=0.9)
+    boss_11 = positions(env.images_space['boss-11'], threshold=0.9)
+    boss_12 = positions(env.images_space['boss-12'], threshold=0.9)
 
     if env.space['surrender_boss'] == 3:
         print('Surrender BOSS 3')
