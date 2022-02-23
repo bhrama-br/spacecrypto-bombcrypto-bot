@@ -304,16 +304,16 @@ def login():
 
 
 def if_surrender():
-    boss_3 = positions(env.images_space['boss-3'], threshold=0.9)
-    boss_4 = positions(env.images_space['boss-3'], threshold=0.9)
-    boss_5 = positions(env.images_space['boss-5'], threshold=0.9)
-    boss_6 = positions(env.images_space['boss-6'], threshold=0.9)
-    boss_7 = positions(env.images_space['boss-7'], threshold=0.9)
-    boss_8 = positions(env.images_space['boss-8'], threshold=0.9)
-    boss_9 = positions(env.images_space['boss-9'], threshold=0.9)
-    boss_10 = positions(env.images_space['boss-10'], threshold=0.9)
-    boss_11 = positions(env.images_space['boss-11'], threshold=0.9)
-    boss_12 = positions(env.images_space['boss-12'], threshold=0.9)
+    boss_3 = positions(env.images_space['boss-3'], threshold=0.95)
+    boss_4 = positions(env.images_space['boss-4'], threshold=0.95)
+    boss_5 = positions(env.images_space['boss-5'], threshold=0.95)
+    boss_6 = positions(env.images_space['boss-6'], threshold=0.95)
+    boss_7 = positions(env.images_space['boss-7'], threshold=0.95)
+    boss_8 = positions(env.images_space['boss-8'], threshold=0.95)
+    boss_9 = positions(env.images_space['boss-9'], threshold=0.95)
+    boss_10 = positions(env.images_space['boss-10'], threshold=0.95)
+    boss_11 = positions(env.images_space['boss-11'], threshold=0.95)
+    boss_12 = positions(env.images_space['boss-12'], threshold=0.95)
 
     if env.space['surrender_boss'] == 3:
         print('Surrender BOSS 3')

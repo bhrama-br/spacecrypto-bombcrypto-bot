@@ -35,10 +35,15 @@ def login():
     else:
         Log.logger('Logging process start...', color='cyan')
 
-    sleep(10)
+    sleep(6)
 
     if clickBtn(env.images['connect-wallet'], name='connectWalletBtn', timeout = 10):
-        Log.logger('🎉 Connect wallet button detected, logging in!')
+        Log.logger('🎉 Connect wallet button detected, logging Game in!')
+        env.login_attempts = env.login_attempts + 1
+
+        
+    if clickBtn(env.images['connect-wallet2'], name='connectWalletMetaMaskBtn', timeout = 10):
+        Log.logger('🎉 Connect login wallet button detected, logging Metamask in!')
         env.login_attempts = env.login_attempts + 1
 
     if clickOnSignIn():
