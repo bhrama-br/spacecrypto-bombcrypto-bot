@@ -12,7 +12,7 @@ Metamask wallet (BNB/SPG/BUSD/BCOIN): 0xa5e1412B4dBf4bE9Fb3f52b12aBFF7A78272B9b3
 ## Quer bot para algum jogo? entra no discord e coloque qual jogo!
 
 CANAL DISCORD
-https://discord.gg/ahwf3Nfd
+https://discord.gg/4gMA5Nhxrb
 
 ## Funções extras adicionadas
 
