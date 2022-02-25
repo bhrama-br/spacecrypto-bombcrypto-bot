@@ -787,3 +787,106 @@ Traceback (most recent call last):
 [2022-02-25 10:12:47] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
 
 
+Traceback (most recent call last):
+[2022-02-25 11:50:28] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 11:50:28] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 11:50:28] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 250, in ship_to_fight
+    scroll_ships()
+[2022-02-25 11:50:28] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-25 11:50:28] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-25 11:51:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 11:51:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 11:51:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 250, in ship_to_fight
+    scroll_ships()
+[2022-02-25 11:51:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-25 11:51:14] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-25 11:51:59] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 11:51:59] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 11:51:59] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 250, in ship_to_fight
+    scroll_ships()
+[2022-02-25 11:51:59] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-25 11:51:59] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-25 11:52:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 11:52:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 11:52:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 250, in ship_to_fight
+    scroll_ships()
+[2022-02-25 11:52:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-25 11:52:45] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-25 11:53:29] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 11:53:29] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 11:53:29] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 250, in ship_to_fight
+    scroll_ships()
+[2022-02-25 11:53:29] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-25 11:53:29] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-25 12:29:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 12:29:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 12:29:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 242, in ship_to_fight
+    buttonsClicked = click_fight_ship_new()
+[2022-02-25 12:29:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 214, in click_fight_ship_new
+    clickBtn(env.images_space['fight'], 0.9, env.images_space['fight-100'])
+[2022-02-25 12:29:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 56, in clickBtn
+    matches = positions(img, threshold=threshold, img=imageDefault)
+[2022-02-25 12:29:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 81, in positions
+    yloc, xloc = np.where(result >= threshold)
+[2022-02-25 12:29:04] ERROR: ValueError: operands could not be broadcast together with shapes (1031,1811) (73,98,3) 
+
+Traceback (most recent call last):
+[2022-02-25 12:35:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 12:35:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 95, in runMultiAccount
+    Auth.login()
+[2022-02-25 12:35:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-25 12:35:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 34, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-25 12:35:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 69, in getPositions
+    img = printScreenForWindow(env.window_object, env.in_login_process == False)
+[2022-02-25 12:35:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\utils\image.py", line 24, in printScreenForWindow
+    window.activate()
+[2022-02-25 12:35:12] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-25 12:35:12] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-25 12:36:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 12:36:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 12:36:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 242, in ship_to_fight
+    buttonsClicked = click_fight_ship_new()
+[2022-02-25 12:36:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 214, in click_fight_ship_new
+    clickBtn(env.images_space['fight'], 3, 0.9, env.images_space['fight-100'])
+[2022-02-25 12:36:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 56, in clickBtn
+    matches = positions(img, threshold=threshold, img=imageDefault)
+[2022-02-25 12:36:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 78, in positions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-25 12:36:08] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+

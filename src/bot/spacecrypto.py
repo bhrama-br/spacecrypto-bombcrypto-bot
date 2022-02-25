@@ -211,7 +211,7 @@ def click_fight_ship_new():
             for i in range(len(not_working_green_bars)):
                 #pyautogui.click()
 
-                clickBtn(env.images_space['fight-100'], 0.9)
+                clickBtn(env.images_space['fight-100'], 3, 0.9)
 
                 global ship_clicks
                 ship_clicks = ship_clicks + 1
