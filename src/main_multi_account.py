@@ -19,7 +19,7 @@ space = cfg['space']
 
 def runMultiAccount():
     intervals = env.cfg['time_intervals']
-    time.sleep(3)
+    time.sleep(2)
 
     windows = []
     titlesBomb = []
@@ -55,11 +55,9 @@ def runMultiAccount():
                 "fight_boss" : 0,
                 "ship_tela_boss": time.time(),
                 "continue": 0,
-
                 "check_login" : 1,
                 "check_ship_to_fight" : space['refresh_ships'],
                 "check_continue": 1,
-
             })
     for i in titlesBomb:
         for w in pygetwindow.getWindowsWithTitle(i):

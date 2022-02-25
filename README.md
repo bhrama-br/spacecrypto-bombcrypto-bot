@@ -35,8 +35,14 @@ Não pode ter Pasta ou Qualquer coisa que nao seja os jogos, nome com BombCrypto
 
 
 space:
-  ###### True para Resolução 1920x1080, False para 1600x900
-  checkResolution: False
+  ###### ###PT### Tempo para colocar as naves para trabalhar
+  ###### ###EN### Time to put the ships to work
+  refresh_ships: 35
+  ###### Surrender 3 to 12 need alter Images.
+  ###### Default 0, Won't surrender.
+  surrender_boss: 8
+  ###### Add ships 100% = True.
+  fight_100: True
 
 # Instalação:
 

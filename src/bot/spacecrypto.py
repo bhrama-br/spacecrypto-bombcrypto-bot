@@ -49,11 +49,11 @@ def show(rectangles, img = None):
     cv2.imshow('img',img)
     cv2.waitKey(0)
 
-def clickBtn(img, timeout=3, threshold = 0.8):
+def clickBtn(img, timeout=3, threshold = 0.8, imageDefault = None):
     start = time.time()
     has_timed_out = False
     while(not has_timed_out):
-        matches = positions(img, threshold=threshold)
+        matches = positions(img, threshold=threshold, img=imageDefault)
         if(len(matches)==0):
             has_timed_out = time.time()-start > timeout
             continue
@@ -184,7 +184,15 @@ def click_fight_ship_new():
             h_scroll = h
             w_scroll = w   
 
-    buttomFight = positions(env.images_space['fight'], threshold=0.9)
+    if env.space['fight_100'] == True:
+        print('naves 100%')
+        button_run_ships = env.images_space['fight-100']
+    else:
+        button_run_ships = env.images_space['fight']
+    
+
+    buttomFight = positions(button_run_ships, threshold=0.9)
+    
     not_working_green_bars = []
     for bar in buttomFight:
         not_working_green_bars.append(bar)
@@ -202,7 +210,9 @@ def click_fight_ship_new():
 
             for i in range(len(not_working_green_bars)):
                 #pyautogui.click()
-                clickBtn(env.images_space['fight'])
+
+                clickBtn(env.images_space['fight-100'], 0.9)
+
                 global ship_clicks
                 ship_clicks = ship_clicks + 1
                 ship_clicks_cnt = ship_clicks_cnt + 1

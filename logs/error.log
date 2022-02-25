@@ -109,3 +109,681 @@ Traceback (most recent call last):
     raise FailSafeException(
 [2022-02-22 15:54:41] ERROR: pyautogui.FailSafeException: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
 
+Traceback (most recent call last):
+[2022-02-23 09:05:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 09:05:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 97, in runMultiAccount
+    Auth.login()
+[2022-02-23 09:05:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-23 09:05:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 34, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-23 09:05:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 72, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-23 09:05:18] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-23 09:06:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 09:06:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 97, in runMultiAccount
+    Auth.login()
+[2022-02-23 09:06:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\login.py", line 20, in login
+    if clickBtn(env.images['ok'], name='okBtn', timeout=5):
+[2022-02-23 09:06:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 34, in clickBtn
+    matches = getPositions(img, threshold=threshold)
+[2022-02-23 09:06:14] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 72, in getPositions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-23 09:06:14] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-23 14:08:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:08] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:08] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:08:08] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:08:08] ERROR: Traceback (most recent call last):
+[2022-02-23 14:08:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:08:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:08:08] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:08] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:08] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:08:20] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:20] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:20] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:08:20] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:08:20] ERROR: Traceback (most recent call last):
+[2022-02-23 14:08:20] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:08:20] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:08:20] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:20] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:20] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:08:32] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:32] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:32] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:08:32] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:08:32] ERROR: Traceback (most recent call last):
+[2022-02-23 14:08:32] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:08:32] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:08:32] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:32] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:32] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:08:44] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:44] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:44] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:08:44] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:08:44] ERROR: Traceback (most recent call last):
+[2022-02-23 14:08:44] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:08:44] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:08:44] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:44] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:44] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:08:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:08:57] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:08:57] ERROR: Traceback (most recent call last):
+[2022-02-23 14:08:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:08:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:08:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:08:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:08:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:09:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:09:09] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:09:09] ERROR: Traceback (most recent call last):
+[2022-02-23 14:09:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:09:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:09:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:09:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:09:21] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:09:21] ERROR: Traceback (most recent call last):
+[2022-02-23 14:09:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:09:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:09:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:09:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:09:33] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:09:33] ERROR: Traceback (most recent call last):
+[2022-02-23 14:09:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:09:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:09:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:09:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:09:45] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:09:45] ERROR: Traceback (most recent call last):
+[2022-02-23 14:09:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:09:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:09:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:09:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:09:57] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:09:57] ERROR: Traceback (most recent call last):
+[2022-02-23 14:09:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:09:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:09:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:09:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:09:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:10:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:10:09] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:10:09] ERROR: Traceback (most recent call last):
+[2022-02-23 14:10:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:10:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:10:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:10:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:10:21] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:10:21] ERROR: Traceback (most recent call last):
+[2022-02-23 14:10:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:10:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:10:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:10:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:10:33] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:10:33] ERROR: Traceback (most recent call last):
+[2022-02-23 14:10:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:10:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:10:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:10:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:10:45] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:10:45] ERROR: Traceback (most recent call last):
+[2022-02-23 14:10:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:10:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:10:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:10:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:10:57] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:10:57] ERROR: Traceback (most recent call last):
+[2022-02-23 14:10:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:10:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:10:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:10:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:10:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:11:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:11:09] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:11:09] ERROR: Traceback (most recent call last):
+[2022-02-23 14:11:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:11:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:11:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:11:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:11:21] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:11:21] ERROR: Traceback (most recent call last):
+[2022-02-23 14:11:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:11:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:11:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:11:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:11:33] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:11:33] ERROR: Traceback (most recent call last):
+[2022-02-23 14:11:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:11:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:11:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:11:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:11:45] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:11:45] ERROR: Traceback (most recent call last):
+[2022-02-23 14:11:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:11:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:11:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:11:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:11:57] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:11:57] ERROR: Traceback (most recent call last):
+[2022-02-23 14:11:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:11:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:11:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:11:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:11:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:12:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:12:09] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:12:09] ERROR: Traceback (most recent call last):
+[2022-02-23 14:12:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:12:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:12:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:12:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:12:21] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:12:21] ERROR: Traceback (most recent call last):
+[2022-02-23 14:12:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:12:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:12:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:12:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:12:33] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:12:33] ERROR: Traceback (most recent call last):
+[2022-02-23 14:12:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:12:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:12:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:12:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:12:45] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:12:45] ERROR: Traceback (most recent call last):
+[2022-02-23 14:12:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:12:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:12:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:12:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:12:57] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:12:57] ERROR: Traceback (most recent call last):
+[2022-02-23 14:12:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:12:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:12:57] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:12:57] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:12:57] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:13:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:13:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:13:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:13:09] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:13:09] ERROR: Traceback (most recent call last):
+[2022-02-23 14:13:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:13:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:13:09] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:13:09] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:13:09] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:13:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:13:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:13:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:13:21] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:13:21] ERROR: Traceback (most recent call last):
+[2022-02-23 14:13:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:13:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:13:21] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:13:21] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:13:21] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:13:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:13:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:13:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:13:33] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:13:33] ERROR: Traceback (most recent call last):
+[2022-02-23 14:13:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:13:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:13:33] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:13:33] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:13:33] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-23 14:13:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 108, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:13:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:13:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+[2022-02-23 14:13:45] ERROR: 
+During handling of the above exception, another exception occurred:
+
+[2022-02-23 14:13:45] ERROR: Traceback (most recent call last):
+[2022-02-23 14:13:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-23 14:13:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 122, in runMultiAccount
+    Action.activeWindow()
+[2022-02-23 14:13:45] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\action.py", line 111, in activeWindow
+    env.window_object.activate()
+[2022-02-23 14:13:45] ERROR:   File "C:\Users\Paulo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pygetwindowmp\_pygetwindow_win.py", line 181, in activate
+    win32gui.SetForegroundWindow(self._hWnd)
+[2022-02-23 14:13:45] ERROR: pywintypes.error: (0, 'SetForegroundWindow', 'No error message is available')
+
+Traceback (most recent call last):
+[2022-02-24 14:55:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-24 14:55:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-24 14:55:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 240, in ship_to_fight
+    scroll_ships()
+[2022-02-24 14:55:18] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-24 14:55:18] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-24 14:56:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-24 14:56:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-24 14:56:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 240, in ship_to_fight
+    scroll_ships()
+[2022-02-24 14:56:04] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 98, in scroll_ships
+    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
+[2022-02-24 14:56:04] ERROR: NameError: name 'x_scroll' is not defined
+
+Traceback (most recent call last):
+[2022-02-25 10:09:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 10:09:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 10:09:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 244, in ship_to_fight
+    buttonsClicked = click_fight_ship_new()
+[2022-02-25 10:09:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 214, in click_fight_ship_new
+    clickBtn(env.images_space['fight'], 3, 0.9, button_run_ships)
+[2022-02-25 10:09:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 56, in clickBtn
+    matches = positions(img, threshold=threshold, img=imageDefault)
+[2022-02-25 10:09:12] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 78, in positions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-25 10:09:12] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-25 10:10:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 10:10:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 10:10:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 244, in ship_to_fight
+    buttonsClicked = click_fight_ship_new()
+[2022-02-25 10:10:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 214, in click_fight_ship_new
+    clickBtn(env.images_space['fight'], 3, 0.9, button_run_ships)
+[2022-02-25 10:10:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 56, in clickBtn
+    matches = positions(img, threshold=threshold, img=imageDefault)
+[2022-02-25 10:10:22] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 78, in positions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-25 10:10:22] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+
+Traceback (most recent call last):
+[2022-02-25 10:12:47] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\index.py", line 15, in <module>
+    runMultiAccount()
+[2022-02-25 10:12:47] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\main_multi_account.py", line 131, in runMultiAccount
+    Space.ship_to_fight()
+[2022-02-25 10:12:47] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 243, in ship_to_fight
+    buttonsClicked = click_fight_ship_new()
+[2022-02-25 10:12:47] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 214, in click_fight_ship_new
+    clickBtn(env.images_space['fight'], 3, 0.9, env.images_space['fight-100'])
+[2022-02-25 10:12:47] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 56, in clickBtn
+    matches = positions(img, threshold=threshold, img=imageDefault)
+[2022-02-25 10:12:47] ERROR:   File "C:\Users\Paulo\Downloads\Bot Bomb\bot\src\bot\spacecrypto.py", line 78, in positions
+    result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
+[2022-02-25 10:12:47] ERROR: cv2.error: OpenCV(4.5.4) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\templmatch.cpp:1175: error: (-215:Assertion failed) _img.size().height <= _templ.size().height && _img.size().width <= _templ.size().width in function 'cv::matchTemplate'
+
+

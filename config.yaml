@@ -222,7 +222,7 @@ space:
 
   ###PT### Tempo para colocar as naves para trabalhar
   ###EN### Time to put the ships to work
-  refresh_ships: 20
+  refresh_ships: 35
   
   ###PT### Quantidade de scroll nas naves
   ###EN### Amount of scroll on ships
@@ -231,3 +231,6 @@ space:
   # Surrender 3 to 12 need alter Images.
   # Default 0, Won't surrender.
   surrender_boss: 8
+
+  # Add ships 100% = True.
+  fight_100: True
