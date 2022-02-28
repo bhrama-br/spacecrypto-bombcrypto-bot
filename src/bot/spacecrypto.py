@@ -403,6 +403,7 @@ def refreshSpaceships(qtd):
     while(empty_scrolls_attempts >0):  
         if st['repair_ships'] == True:  
             is_repair()
+            
         aux_ships = ships_clicks
         buttonsClicked = clickButtonsFight()          
         if aux_ships != ships_clicks:

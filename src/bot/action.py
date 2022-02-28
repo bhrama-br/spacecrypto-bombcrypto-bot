@@ -4,7 +4,13 @@ import numpy as np
 import pyautogui
 import time
 
-import pygetwindowmp as pygetwindow
+import os
+
+if os.name == 'nt':
+    import pygetwindow as pygetwindow
+
+if os.name == 'posix':
+    import pygetwindowmp as pygetwindow
 
 
 import src.bot.logger as Log

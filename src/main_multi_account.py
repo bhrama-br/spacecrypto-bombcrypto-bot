@@ -1,6 +1,12 @@
 import time
 import sys
-import pygetwindowmp as pygetwindow
+import os
+
+if os.name == 'nt':
+    import pygetwindow as pygetwindow
+
+if os.name == 'posix':
+    import pygetwindowmp as pygetwindow
 
 from src.utils.number import addRandomness
 import src.bot.logger as Log
