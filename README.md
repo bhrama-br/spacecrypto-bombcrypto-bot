@@ -38,7 +38,7 @@ https://discord.gg/4gMA5Nhxrb
 - Opção de enviar apenas naves comuns (em testes).:
 - Correções de bugs 
 
-# Perguntas frequentes (FAQ)
+# Perguntas frequentes (FAQ) - SpaceCrypto
 
 •    Serve para multi account?
  
