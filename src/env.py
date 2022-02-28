@@ -45,8 +45,7 @@ space = cfg['space']
 
 logger('Loading assets...', color='green')
 images = loadImages()
-
-images_space = loadImagesSpace(space['checkResolution'])
+images_space = loadImagesSpace(space['general_settings']['resolution'])
 
 if home['enable']:
     logger('HOME Enabled. Loading heroes assets...', color='green')

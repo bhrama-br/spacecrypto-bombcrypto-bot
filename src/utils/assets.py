@@ -3,6 +3,7 @@ from os import listdir
 import src.env as env
 from src.utils import string
 from src.utils.image import resizeImageForScale
+from time import sleep
 
 def loadHeroesImagesToHome():
     file_names = listdir('./targets/heroes-to-send-home')
@@ -33,26 +34,16 @@ def loadImages():
     return targets
 
     
-def loadImagesSpace(resize):
-    print('>>---> Loading Images SpaceCrypto')
-    if resize:
-        print('1920x1080')
-
-        file_names = listdir('./img_compare/')
-    else:
-        print('1600x900')
-        
-        file_names = listdir('./img_compare/1600x900/')
-    
+def loadImagesSpace(resolution = 1):
+    if resolution == 1:
+        dir_path = './img_compare/1366x768/'
+    elif resolution == 2:
+        dir_path ='./img_compare/1680x1050/'
+    elif resolution == 3:
+        dir_path ='./img_compare/1920x1080/'    
+    file_names = listdir(dir_path)
     targets = {}
     for file in file_names:
-        if resize:
-            path = 'img_compare/' + file
-        else:
-            path = 'img_compare/1600x900/' + file
-        
-        target_name = string.removeSuffix(file, '.png')
-        target_name = string.removeSuffix(target_name, '.PNG')
-        temp_image = cv2.imread(path)
-        targets[target_name] = temp_image
+        path = dir_path[2:] + file
+        targets[string.removeSuffix(file, '.png')] = cv2.imread(path)
     return targets

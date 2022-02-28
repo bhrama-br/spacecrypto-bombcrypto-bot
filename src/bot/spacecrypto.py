@@ -10,19 +10,60 @@ import time
 import sys
 import src.env as env
 
-# Tempo entre ações
-pyautogui.PAUSE = 0.5
-global x_scroll
-global y_scroll
-global h_scroll
-global w_scroll
+from src.utils.debug import Debug
+import yaml
+import datetime
+import webbrowser
 
+
+VERSAO_SCRIPT = "2.00"
+
+c = env.space
+st = c['ship_settings']
+th = c['threshold']
+ot = c['optimization_settings']
+gs = c['general_settings']
+rw = c['rewards']
+
+global login_attempts
+login_attempts = 0
+
+# Tempo entre ações
+pyautogui.PAUSE = ot['time_click']
+
+# Adiciona a media de recompensas de cada boss
+rewards = []
+rewards.append(0)
+rewards.append(rw['boss_1'])
+rewards.append(rw['boss_2'])
+rewards.append(rw['boss_3'])
+rewards.append(rw['boss_4'])
+rewards.append(rw['boss_5'])
+rewards.append(rw['boss_6'])
+rewards.append(rw['boss_7'])
+rewards.append(rw['boss_8'])
+rewards.append(rw['boss_9'])
+rewards.append(rw['boss_10'])
+rewards.append(rw['boss_11'])
+rewards.append(rw['boss_12'])
+rewards.append(rw['boss_13'])
+rewards.append(rw['boss_14'])
+rewards.append(rw['boss_15'])
+rewards.append(rw['boss_16'])
+rewards.append(rw['boss_17'])
+rewards.append(rw['boss_18'])
+rewards.append(rw['boss_19'])
+rewards.append(rw['boss_20'])
+
+total_rewards = 0
+ships_clicks = 0
+cont_boss = 1
+dbg = Debug('debug.log')
 
 def addRandomness(n, randomn_factor_size=None):
     if randomn_factor_size is None:
         randomness_percentage = 0.1
         randomn_factor_size = randomness_percentage * n
-
     random_factor = 2 * random() * randomn_factor_size
     if random_factor > 5:
         random_factor = 5
@@ -38,7 +79,6 @@ def remove_suffix(input_string, suffix):
         return input_string[:-len(suffix)]
     return input_string
 
-
 def show(rectangles, img = None):
     if img is None:
         with mss.mss() as sct:
@@ -49,22 +89,26 @@ def show(rectangles, img = None):
     cv2.imshow('img',img)
     cv2.waitKey(0)
 
-def clickBtn(img, timeout=3, threshold = 0.8, imageDefault = None):
+def clickBtn(img,name=None, timeout=3, threshold = th['default']):
+    if not name is None:
+        pass
     start = time.time()
-    has_timed_out = False
-    while(not has_timed_out):
-        matches = positions(img, threshold=threshold, img=imageDefault)
+    while(True):
+        matches = positions(img, threshold=threshold)
         if(len(matches)==0):
-            has_timed_out = time.time()-start > timeout
+            hast_timed_out = time.time()-start > timeout
+            if(hast_timed_out):
+                if not name is None:
+                    pass
+
+                return False
             continue
         x,y,w,h = matches[0]
         pos_click_x = x+w/2
         pos_click_y = y+h/2
-        moveToWithRandomness(pos_click_x,pos_click_y,0.5)
+        moveToWithRandomness(pos_click_x,pos_click_y,ot['move_speed_mouse'])
         pyautogui.click()
         return True
-
-    return False
 
 def printSreen():
     with mss.mss() as sct:
@@ -72,7 +116,7 @@ def printSreen():
         sct_img = np.array(sct.grab(monitor))
         return sct_img[:,:,:3]
 
-def positions(target, threshold=0.8, img = None):
+def positions(target, threshold=th['default'],img = None):
     if img is None:
         img = printSreen()
     result = cv2.matchTemplate(img,target,cv2.TM_CCOEFF_NORMED)
@@ -86,340 +130,366 @@ def positions(target, threshold=0.8, img = None):
     rectangles, weights = cv2.groupRectangles(rectangles, 1, 0.2)
     return rectangles
 
-def scroll_ships():
-    global x_scroll
-    global y_scroll
-    global h_scroll
-    global w_scroll
-    use_click_and_drag_instead_of_scroll = True
-    click_and_drag_amount = 220
-    scroll_size = 220
+def processLogin():
+    dbg.console('Starting Login', 'INFO', 'ambos')
+    sys.stdout.flush()
+    loginSPG()
+    time.sleep(2)
+    playSPG()
 
-    moveToWithRandomness(x_scroll+(w_scroll/2),y_scroll+400+(h_scroll/2),1)
-    if not use_click_and_drag_instead_of_scroll:
-        pyautogui.scroll(-scroll_size)
-    else:
-        pyautogui.dragRel(0,-click_and_drag_amount,duration=1, button='left')
-
-
-def finish_boss():
-    finish_boss = positions(env.images_space['finish_boss'], threshold=0.9)
-    if len(finish_boss)!=0 :
-        clickBtn(env.images_space['finish_boss'])
-        time.sleep(0.8)
-
-
-def go_to_ship():
-    if clickBtn(env.images_space['ship']):
-        print('Encontrou ship buttom')
-        return True
-    else:
-        return False
-
-def go_to_fight():
-    if clickBtn(env.images_space['fight-boss']):
-        print('''Vai para fight boss!!
-        ''')
-
-def ships_15_15():
-    start = time.time()
-    has_timed_out = False
-    while(not has_timed_out):
-        matches = positions(env.images_space['15-15-boss'], 1)
-
-        if(len(matches)==0):
-            has_timed_out = time.time()-start > 3
-            continue
-        print('Encontrou 15-15 tela naves')
-        return True
-    return False
-
-def ships_0_15():
-    matches = positions(env.images_space['0-15'], 0.8)
-
-    if(len(matches)==0):
-        print('Encontrou 0-15 tela naves')
-        return False
-    return True
-
-def ships_15_15_boss():
-    start = time.time()
-    has_timed_out = False
-    while(not has_timed_out):
-        matches = positions(env.images_space['15-15-boss'], 1)
-
-        if(len(matches)==0):
-            has_timed_out = time.time()-start > 3
-            continue
-        print('Encontrou 15-15 boss')
-        return True
-    return False
-
-def time_is_zero():
-    start = time.time()
-    has_timed_out = False
-    while(not has_timed_out):
-        matches = positions(env.images_space['time-zero'], 0.8)
-
-        if(len(matches)==0):
-            has_timed_out = time.time()-start > 3
-            continue
-        print('Encontrou time-zero')
-        return True
-    print('Time diferente de zero')
-    return False
-
-def click_fight_ship_new():
-    global x_scroll
-    global y_scroll
-    global h_scroll
-    global w_scroll
-    scrollCheck = positions(env.images_space['newlatter'], threshold=0.9)       
-
-    for key,(x, y, w, h) in enumerate(scrollCheck):
-        #print('key: ', key)
-        if key == 0:
-            x_scroll = x
-            y_scroll = y
-            h_scroll = h
-            w_scroll = w   
-
-    if env.space['fight_100'] == True:
-        print('naves 100%')
-        button_run_ships = env.images_space['fight-100']
-    else:
-        button_run_ships = env.images_space['fight']
-    
-
-    buttomFight = positions(button_run_ships, threshold=0.9)
-    
-    not_working_green_bars = []
-    for bar in buttomFight:
-        not_working_green_bars.append(bar)
-
-        
-    if len(not_working_green_bars) > 0:
-        print('buttons with green bar detected', len(not_working_green_bars))
-        print('Naves disponiveis', len(not_working_green_bars))
-
-    ship_clicks_cnt = 0
-    for (x, y, w, h) in not_working_green_bars:
-        if len(not_working_green_bars) > 0 :
-            if ships_15_15():
-                return len(not_working_green_bars)
-
-            for i in range(len(not_working_green_bars)):
-                #pyautogui.click()
-
-                clickBtn(env.images_space['fight-100'], 3, 0.9)
-
-                global ship_clicks
-                ship_clicks = ship_clicks + 1
-                ship_clicks_cnt = ship_clicks_cnt + 1
-                if ship_clicks > 15:
-                    return            
-            print("Qtd ship enviadas: " + str(ship_clicks_cnt) + ". " + "Qtd ship total enviadas: " + str(ship_clicks))   
-            #print("Qtd ship total enviadas", ship_clicks) 
-            click_fight_ship_new()
-        else:
-            return len(not_working_green_bars)
-    return len(not_working_green_bars)
-
-       
-def ship_to_fight():    
-    global ship_clicks
-    go_to_continue()
-    verify_error()
-    
-    finish_boss()
-
-    #if time_is_zero():
-    if go_to_ship():
-        ship_clicks = 0
-        buttonsClicked = 1
-        empty_scrolls_attempts = env.space['qtScroll']
-        while(empty_scrolls_attempts >0):
-            buttonsClicked = click_fight_ship_new()
-            if ships_15_15():
-                break 
-            if buttonsClicked == 0:
-                empty_scrolls_attempts = empty_scrolls_attempts - 1
-                       
-            if ship_clicks > 15:
-                break    
-            scroll_ships()
-            time.sleep(1)
-        go_to_fight()
-    else:
+def scroll(clickAndDragAmount):
+    flagScroll = positions(env.images_space['spg-flag-scrool'], th['commom'])    
+    if (len(flagScroll) == 0):
         return
-    #else:
-    #    return
+    x,y,w,h = flagScroll[len(flagScroll)-1]
+    moveToWithRandomness(x,y,ot['move_speed_mouse'])
+    pyautogui.dragRel(0,clickAndDragAmount,duration=1, button='left')
 
-def go_to_ship_tela_boss():
-    if clickBtn(env.images_space['ship-boss']):
-        print('Volta para naves, tela boss')
-        return True
-    else:   
-        return False
 
-def ship_tela_boss():
-    if ships_15_15_boss():
+def loginSPG():
+    global login_attempts    
+    if login_attempts > 3:
+        dbg.console('Too many login attempts, refreshing', 'ERROR', 'ambos')
+        login_attempts = 0
+        processLogin()
         return
-    elif ships_15_15_boss() == False:        
-        if go_to_ship_tela_boss():
-            time.sleep(5)
-            buttonsClicked = 1
-            empty_scrolls_attempts = env.space['qtScroll']
-
-
-            while(empty_scrolls_attempts >0):
-                buttonsClicked = click_fight_ship_new()
-                if buttonsClicked == 0:
-                    empty_scrolls_attempts = empty_scrolls_attempts - 1
-                if ships_15_15():
-                    break
-                scroll_ships()
-                time.sleep(2)
-            
-            go_to_fight()
-
+    if clickBtn(env.images_space['connect-wallet'], name='connectWalletBtn', timeout = 10):
+        dbg.console('Connect wallet button detected, logging in!', 'INFO', 'ambos')       
+        login_attempts = login_attempts + 1
+    if clickBtn(env.images_space['sign'], name='sign button', timeout=30):
+        login_attempts = login_attempts + 1
+        return
+    if clickBtn(env.images_space['sign'], name='signBtn', timeout = 20):
+        login_attempts = login_attempts + 1
+    
+def playSPG():
+    if clickBtn(env.images_space['play'], name='okPlay', timeout=30):
+        dbg.console('played SPG','INFO', 'ambos')   
 
 def login():
-    
-    print("Verificando se o jogo foi desconectado")
-    go_to_continue()
-    verify_error()
-
-    victory_boss()
-
-    if_surrender()
-
-    loginButton = positions(env.images_space['connect-wallet'], threshold=0.9)
-    if len(loginButton)!=0 :
-        if clickBtn(env.images_space['connect-wallet'], timeout = 10):
-            print('Connect wallet encontrado')
-            verify_error()
-
-        if clickBtn(env.images_space['sign'], timeout=8):
-            print('Sign button encontrado')
-            
-            if clickBtn(env.images_space['play'], timeout = 15):
-                print('Botao play encontrado')
-                print('''Jogo iniciado com sucesso!!
-
-                ''')
-                login_attempts = 0
-            return
-    return
-
-
-def if_surrender():
-    boss_3 = positions(env.images_space['boss-3'], threshold=0.95)
-    boss_4 = positions(env.images_space['boss-4'], threshold=0.95)
-    boss_5 = positions(env.images_space['boss-5'], threshold=0.95)
-    boss_6 = positions(env.images_space['boss-6'], threshold=0.95)
-    boss_7 = positions(env.images_space['boss-7'], threshold=0.95)
-    boss_8 = positions(env.images_space['boss-8'], threshold=0.95)
-    boss_9 = positions(env.images_space['boss-9'], threshold=0.95)
-    boss_10 = positions(env.images_space['boss-10'], threshold=0.95)
-    boss_11 = positions(env.images_space['boss-11'], threshold=0.95)
-    boss_12 = positions(env.images_space['boss-12'], threshold=0.95)
-
-    if env.space['surrender_boss'] == 3:
-        print('Surrender BOSS 3')
-        if len(boss_3) != 0 or len(boss_4) != 0 or len(boss_5) != 0 or len(boss_6) != 0 or len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-
-    if env.space['surrender_boss'] == 4:
-        print('Surrender BOSS 4')
-        if len(boss_4) != 0 or len(boss_5) != 0 or len(boss_6) != 0 or len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-        
-    if env.space['surrender_boss'] == 5:
-        print('Surrender BOSS 5')
-        if len(boss_5) != 0 or len(boss_6) != 0 or len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-    
-    if env.space['surrender_boss'] == 6:
-        print('Surrender BOSS 6')
-        if len(boss_6) != 0 or len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-    
-    if env.space['surrender_boss'] == 7:
-        print('Surrender BOSS 7')
-        if len(boss_7) != 0 or len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-    
-    if env.space['surrender_boss'] == 8:
-        print('Surrender BOSS 8')
-        if len(boss_8) != 0 or len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-    
-    if env.space['surrender_boss'] == 9:
-        print('Surrender BOSS 9')
-        if len(boss_9) != 0 or len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-    
-    if env.space['surrender_boss'] == 10:
-        print('Surrender BOSS 10')
-        if len(boss_10) != 0 or len(boss_11) != 0 or len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-    
-    if env.space['surrender_boss'] == 11:
-        print('Surrender BOSS 11')
-        if len(boss_11) != 0 or len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-    
-    if env.space['surrender_boss'] == 12:
-        print('Surrender BOSS 12')
-        if len(boss_12) != 0:
-            print('Encontrou o boss')
-            surrender()
-    
-def surrender():
-    print('Surrender Success')
-    button_surrender = positions(env.images_space['surrender'], threshold=0.9)
-    if len(button_surrender) != 0:
-        clickBtn(env.images_space['surrender'])
-        print('Click surrender')
-        time.sleep(1)
-
-def confirm_surrender():
-    print('Confirm Surrender')
-    button_surrender = positions(env.images_space['confirm-surrender'], threshold=0.9)
-    if len(button_surrender) != 0:
-        clickBtn(env.images_space['confirm-surrender'])
-        print('Click confirm surrender')
-        time.sleep(0.8)
-
-def victory_boss():
-    victory = positions(env.images_space['victory'], threshold=0.9)
-    if len(victory)!=0 :
-        print('Victory Success!')
-        clickBtn(env.images_space['victory-button'])
-        time.sleep(0.8)
-
-def verify_error():
-    if clickBtn(env.images_space['error'], timeout = 8):
-        print('Erro Login')
-        pyautogui.hotkey('ctrl','f5')
-        time.sleep(0.6)
-        login()
-        return
-
-def go_to_continue():
-    if clickBtn(env.images_space['confirm']):
-        print('Encontrou confirm')
-        time.sleep(0.6)
+    if len(positions(env.images_space['connect-wallet'], th['commom'])) > 0:        
+        processLogin() 
         return True
     else:
         return False
+
+def save_reward(type_value, average_value, result):   
+    global total_rewards
+    global cont_boss    
+    first_write = False
+    hora_rede_local = time.strftime("%H:%M:%S", time.localtime())
+    total_rewards = total_rewards + result
+    arquivo = open('rewards.log','a')
+    str_log = '[' + str(format(datetime.date.today())) + '] [' + str(hora_rede_local) + '] [BOSS: ' + str(cont_boss) + '] [AVERAGE_VALUE:' + str(average_value) + '] [REWARD:' + str(type_value) + '] [RESULT:' + str(result) + '] [TOTAL:' +  str(round(total_rewards, 2)) + ']'
+    arquivo.write(str_log + '\n')
+    arquivo.close()
+
+def look_rewards():
+    global cont_boss
+    value = 0     
+    if st['get_rewards'] == True:
+        if len(positions(env.images_space['rewards-x05'], th['rewards'])) > 0:
+            result = rewards[cont_boss]*0.5
+            dbg.console('Reward x0.5','INFO', 'ambos')
+            save_reward('x0.5', rewards[cont_boss], result)
+        elif len(positions(env.images_space['rewards-x1'], th['rewards'])) > 0:
+            result = rewards[cont_boss]*1
+            dbg.console('Reward x1','INFO', 'ambos')
+            save_reward('x1', rewards[cont_boss], result)
+        elif len(positions(env.images_space['rewards-x2'], th['rewards'])) > 0:  
+            result = rewards[cont_boss]*2
+            dbg.console('Reward x2','INFO', 'ambos')
+            save_reward('x2', rewards[cont_boss], result)
+        elif len(positions(env.images_space['rewards-x100'], th['rewards'])) > 0: 
+            result = rewards[cont_boss]*100
+            dbg.console('Reward x100','INFO', 'ambos')
+            save_reward('x100', rewards[cont_boss], result)
+
+def confirm():
+    global cont_boss
+    confirm_action = False
+    if len(positions(env.images_space['lose'], th['commom'])) > 0 and cont_boss > 1:
+        if clickBtn(env.images_space['confirm-lose'], name='okBtn', timeout=1, threshold  = th['confirm-end-boss']):
+            time.sleep(2) 
+            endFight()  
+            confirm_action = True
+    if len(positions(env.images_space['victory'], th['commom'])) > 0:  
+        if len(positions(env.images_space['confirm-victory-1'], th['commom'])) > 0 or len(positions(env.images_space['confirm-victory-2'], th['commom'])) > 0:
+            look_rewards()
+            if clickBtn(env.images_space['confirm-victory-1'], name='okVicBtn', timeout=2) or clickBtn(env.images_space['confirm-victory-2'], name='okVicBtn', timeout=2):
+                #dbg.console('Confirm victory encontrado','INFO', 'ambos')
+                dbg.console('Boss ' + str(cont_boss) + " derrotado",'INFO', 'ambos')
+                cont_boss = cont_boss + 1
+                confirm_action = True
+                if st['boss_surrender'] != 0:
+                    if cont_boss == st['boss_surrender']:
+                        dbg.console("Surrender boss: " + str(st['boss_surrender']), 'INFO', 'ambos')
+                        time.sleep(3)
+                        clickBtn(env.images_space['spg-surrender'])
+                        time.sleep(1)
+                        clickBtn(env.images_space['confirm-surrender'], name='okVicBtn', timeout=2)
+                        cont_boss = 1
+                        if st['select_spaceship_after_surrender'] == True:                 
+                            time.sleep(6)
+                            returnBase()
+                if st['key_waves'] == True: 
+                    if cont_boss == 9:
+                        time.sleep(30) 
+                        dbg.console("Boss 9, refresh ships", 'DEBUG', 'ambos')
+                        clickBtn(env.images_space['ship'], threshold = th['commom'])
+                    if cont_boss == 14:
+                        time.sleep(30) 
+                        dbg.console("Boss 14, refresh ships", 'DEBUG', 'ambos')
+                        clickBtn(env.images_space['ship'], threshold = th['commom'])
+                    if cont_boss == 19:
+                        time.sleep(30) 
+                        dbg.console("Boss 19, refresh ships", 'DEBUG', 'ambos')
+                        clickBtn(env.images_space['ship'], threshold = th['commom'])
+    return confirm_action
+
+def removeSpaceships():
+    global ships_clicks
+    time.sleep(2)   
+    retry_max = 20
+    cnt_remove_ships = 0
+    while True: 
+        buttons = positions(env.images_space['spg-x'], threshold=th['hard'])
+        buttonsNewOrder = []
+        if len(buttons) > 0:
+            index = len(buttons)
+            while index > 0:
+                index -= 1
+                buttonsNewOrder.append(buttons[index])
+            for (x, y, w, h) in buttonsNewOrder:
+                moveToWithRandomness(x+(w/2),y+(h/2),ot['move_speed_mouse'])
+                pyautogui.click()
+                cnt_remove_ships = cnt_remove_ships + 1
+                time.sleep(0.1) 
+        if len(buttons) == 0 or cnt_remove_ships >= retry_max:
+            ships_clicks = 0
+            break
+        if len(positions(env.images_space['close'], th['commom'])) > 0:    
+            screen_close()
+            break
+
+def clickButtonsFight():
+    global ships_clicks
+    offset_x = 60
+    offset_y = 35
+    interval_buttons = 50
+    inteval_common = 30
+
+    if st['send_only_common'] == True:
+        common_ships = positions(env.images_space['common-ship'], th['ships_rarity'])
+        rare_ships = positions(env.images_space['rare-ship'], th['ships_rarity'])
+        ships_to_work = []
+        for bar in common_ships:
+            ships_to_work.append(bar)
+        for bar in rare_ships:
+            ships_to_work.append(bar)                      
+        #for (x_c, y_c, w_c, h_c) in ships_to_work:       
+        #    dbg.console('Commum: ' + str(x_c) + ". Y: " + str(y_c), 'INFO', 'ambos')  
+    
+    if st['send_ships_full'] == True:        
+        green_bars = positions(env.images_space['ship-full'], th['green_bar'])
+        buttons = positions(env.images_space['spg-go-fight'], th['go-fight'])
+        for (x, y, w, h) in green_bars:   
+            for (x_b, y_b, w_b, h_b) in buttons:       
+                if y_b < y+interval_buttons and y_b > y-interval_buttons:
+                    #dbg.console('Have buttom', 'INFO', 'ambos') 
+                    if st['send_only_common']:                        
+                        for (x_c, y_c, w_c, h_c) in ships_to_work:       
+                            if y_c < y+inteval_common and y_c > y-inteval_common:
+                                dbg.console('Is commom', 'INFO', 'ambos')   
+                                moveToWithRandomness(x+offset_x+(w/2),y+offset_y+(h/2),ot['move_speed_mouse'])
+                                pyautogui.click()
+                                ships_clicks = ships_clicks + 1        
+                                if ships_clicks >= st['qtd_send_spaceships']:
+                                    return -1
+                    else:                        
+                        moveToWithRandomness(x+offset_x+(w/2),y+offset_y+(h/2),ot['move_speed_mouse'])
+                        pyautogui.click()
+                        ships_clicks = ships_clicks + 1        
+                        if ships_clicks >= st['qtd_send_spaceships']:
+                            return -1
+                        return 1            
+        return len(green_bars)
+    elif st['send_ships_full'] == False:
+        buttons = positions(env.images_space['spg-go-fight'], th['go-fight'])
+        count_ships_available = 0
+        for (x, y, w, h) in buttons:
+            if st['send_only_common']:     
+                dbg.console('Bottons: ' + str(x) + ". Y: " + str(y), 'INFO', 'ambos')
+                dbg.console('Range: <' + str(y+30) + " - " + str(y-30) + '>', 'INFO', 'ambos')                   
+                for (x_c, y_c, w_c, h_c) in ships_to_work:       
+                    #dbg.console('Commum: ' + str(x) + ". Y: " + str(y), 'INFO', 'ambos')
+                    if y_c < y+10 and y_c > y-70:
+                        #dbg.console('Is commom', 'INFO', 'ambos') 
+                        count_ships_available = count_ships_available + 1  
+                        moveToWithRandomness(x+(w/2),y+(h/2),ot['move_speed_mouse'])
+                        pyautogui.click()
+                        ships_clicks = ships_clicks + 1        
+                        if ships_clicks >= st['qtd_send_spaceships']:
+                            return -1
+            else:
+                moveToWithRandomness(x+(w/2),y+(h/2),0.1)
+                #pyautogui.moveTo(x+(w/2),y+(h/2))
+                pyautogui.click()
+                ships_clicks = ships_clicks + 1        
+                if ships_clicks >= st['qtd_send_spaceships']:
+                    return -1
+                return 1
+        #return count_ships_available
+        return len(buttons)
+
+def refreshPage():
+    pyautogui.hotkey('ctrl','f5')
+    time.sleep(5) 
+
+def screen_close():
+    global cont_boss
+    confirm_click = False
+    if clickBtn(env.images_space['close'],timeout=1):
+        dbg.console('Encontrou close', 'ERROR', 'ambos')        
+        cont_boss = 1
+        confirm_click = True
+        refreshPage()
+    if clickBtn(env.images_space['bt-ok'], timeout=1):
+        dbg.console('Encontrou ok', 'ERROR', 'ambos')        
+        cont_boss = 1
+        confirm_click = True
+    return confirm_click
+
+def reloadSpacheship():
+    global cont_boss
+    if len(positions(env.images_space['spg-base'], th['commom'])) > 0 and len(positions(env.images_space['fight-boss'], th['hard']))  > 0:
+        clickBtn(env.images_space['spg-base'], name='closeBtn', timeout=4)
+        time.sleep(5)
+        clickBtn(env.images_space['ship'], name='closeBtn', timeout=4, threshold = th['commom'])
+        time.sleep(3)        
+        cont_boss = 1
+
+def ships_15_15():
+    if len(positions(env.images_space['15-15-ships'], th['15-15-ships'])) > 0:
+        dbg.console('Encontrou 15-15 tela naves', 'DEBUG', 'ambos')
+        return True
+    else:
+        return False
+
+def refreshSpaceships(qtd):
+    global cont_boss
+    global ships_clicks
+    dbg.console('Refresh Spaceship to Fight', 'INFO', 'ambos')
+    buttonsClicked = 1
+    go_to_boss = False
+    cda =  100
+    aux_ships = 0
+    
+    if ot['set_filter_max_ammo'] == True and len(positions(env.images_space['fight-boss'], th['hard']))  > 0:
+        if len(positions(env.images_space['max-ammo'], th['hard'])) == 0:
+            dbg.console('Setando max ammo', 'INFO', 'ambos')
+            if clickBtn(env.images_space['min-ammo'], timeout=1) or clickBtn(env.images_space['newest'], timeout=1):        
+                time.sleep(0.2)
+                clickBtn(env.images_space['max-ammo-sel'], timeout=4, threshold = th['hard'])
+    empty_scrolls_attempts = 8
+    if ships_clicks > 0:
+        dbg.console('Quantidade ja selecionada:' + str(ships_clicks), 'DEBUG', 'ambos')
+        if ships_clicks == st['qtd_send_spaceships']:
+            empty_scrolls_attempts = 0
+            goToFight()
+    if ships_15_15():
+        go_to_boss = True
+        empty_scrolls_attempts = 0
+    while(empty_scrolls_attempts >0):    
+        is_repair()    
+        aux_ships = ships_clicks
+        buttonsClicked = clickButtonsFight()          
+        if aux_ships != ships_clicks:
+            dbg.console('Spaceships sent to Fight: ' + str(ships_clicks), 'INFO', 'ambos')   
+        if buttonsClicked == 0:
+            empty_scrolls_attempts = empty_scrolls_attempts - 1
+            scroll(-cda)
+        elif buttonsClicked == -1:            
+            dbg.console('Finish Click ships', 'INFO', 'ambos')
+            empty_scrolls_attempts = 0   
+        else:
+            if buttonsClicked > 0:    
+                time.sleep(0.1)            
+                if ships_15_15():
+                    go_to_boss = True
+                    break
+                continue   
+        if len(positions(env.images_space['close'], th['commom'])) > 0:    
+            screen_close()
+            break     
+        time.sleep(1.5)
+
+    if ships_clicks == st['qtd_send_spaceships'] or cont_boss > 1 or go_to_boss == True:
+        empty_scrolls_attempts = 0
+        goToFight()
+    else:
+        reloadSpacheship()
+        
+def goToFight():
+    global ships_clicks
+    global cont_boss
+    ships_clicks = 0 
+    clickBtn(env.images_space['fight-boss'])
+    time.sleep(4)
+    if clickBtn(env.images_space['confirm-lose'], timeout = 4, threshold = th['commom']):
+        cont_boss = 1
+
+def endFight():
+    global cont_boss    
+    cont_boss = 1
+    dbg.console("End fight", 'INFO', 'ambos')
+    time.sleep(3) 
+    returnBase()
+    time.sleep(15) 
+    if len(positions(env.images_space['fight-boss'], th['hard']))  > 0:
+        if st['remove_ships'] == True:
+            removeSpaceships()
+        time.sleep(1) 
+        refreshSpaceships(0)
+    else:
+        refreshPage()
+
+def goToSpaceShips():
+    if clickBtn(env.images_space['ship'], threshold = th['commom']):        
+        global login_attempts
+        login_attempts = 0
+
+def returnBase():
+    goToSpaceShips()
+
+def zero_ships():
+    if len(positions(env.images_space['spg-surrender'], th['commom'])  ) > 0:
+        start = time.time()
+        has_timed_out = False
+        while(not has_timed_out):
+            matches = positions(env.images_space['0-15'], th['0-15'])
+            if(len(matches)==0):
+                has_timed_out = time.time()-start > 1
+                continue
+            elif(len(matches)>0):
+                dbg.console("Zero ships, volta spaceships", 'INFO', 'ambos')
+                time.sleep(1)
+                clickBtn(env.images_space['ship'],timeout = 5, threshold = th['commom'])
+                return True
+    return False  
+
+def spaceships(): 
+    if len(positions(env.images_space['fight-boss'], th['hard']))  > 0:
+        if st['remove_ships'] == True:
+            removeSpaceships()
+        refreshSpaceships(0)
+        return True
+    else:
+        return False
+
+def is_repair():
+    if len(positions(env.images_space['repair'], th['commom']))  > 0:
+        if clickBtn(env.images_space['btn-repair'],timeout = 5, threshold = th['commom']):
+            clickBtn(env.images_space['btn-yes'],timeout = 5, threshold = th['commom'])
+            return True
+    return False

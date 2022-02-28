@@ -14,7 +14,6 @@ from src.utils.config import loadConfigsFromFile
 global space
 global cfg
 cfg = loadConfigsFromFile()
-
 space = cfg['space']
 
 def runMultiAccount():
@@ -48,16 +47,13 @@ def runMultiAccount():
                 "window": w,
                 "login" : 0,
                 "title": 'space',
-                "isOne": 0,
-                "ship_to_fight" : 0,
-                "ship" : 0,
-                "fight" : 0,
-                "fight_boss" : 0,
-                "ship_tela_boss": time.time(),
-                "continue": 0,
+                "close" : 0,
+                "login" : 0,
+                "refresh_page": time.time(),
+
+                "check_close" : 5,  
                 "check_login" : 1,
-                "check_ship_to_fight" : space['refresh_ships'],
-                "check_continue": 1,
+                "check_refresh_page": env.space['ship_settings']['refresh_page'],
             })
     for i in titlesBomb:
         for w in pygetwindow.getWindowsWithTitle(i):
@@ -76,11 +72,12 @@ def runMultiAccount():
         Log.logger('{} -> {}'.format(index+1, last['window'].title), color='cyan')
 
     if len(windows) == 0:
-        Log.logger('Exiting because dont have windows contains "{}" title'.format(title), color='red')
+        Log.logger('Exiting because dont have windows contains "{}" title', color='red')
         exit()
 
     while True:
         now = time.time()
+        action_found = False
         
         for last in windows:
             env.window_object = last["window"]
@@ -117,28 +114,39 @@ def runMultiAccount():
             if last["title"] == "space":
 
                 actual_time = now
-
-                if actual_time - last["login"] > addRandomness(last['check_login'] * 60):
+   
+                Log.logger('Qtd naves total: ' + str(env.space['ship_settings']['empty_qtd_spaceships']), color='cyan')
+                Log.logger('Qtd naves enviar: ' + str(env.space['ship_settings']['qtd_send_spaceships']), color='cyan')
+                
+                Action.activeWindow()
+                
+                if actual_time - last["login"] > addRandomness(last['check_login'] * 60):                    
                     Action.activeWindow()
                     last["login"] = actual_time
-                    Space.login()
+                    if Space.login():
+                        action_found = False 
+                    else:
+                        action_found = False   
+                if Space.spaceships():
+                    action_found = True 
+                if Space.confirm():
+                    action_found = True 
+                if Space.zero_ships():
+                    action_found = True               
+                if actual_time - last["close"] > last['check_close']:
+                    last["close"] = actual_time
+                    if Space.screen_close():
+                        action_found = True
+                if action_found == False:
+                    print('Nenhuma acao encontrada')
+                    if (actual_time - last['refresh_page']) > last['check_refresh_page']:
+                        Action.activeWindow()
 
-
-                if actual_time - last["ship_to_fight"] > addRandomness(last['check_ship_to_fight'] * 60):
-                    Action.activeWindow()
-                    last["ship_to_fight"] = actual_time
-                    print("Ship to fight")
-                    Space.ship_to_fight()
-
-                
-                if actual_time - last["continue"] > last['check_continue']:
-                    Action.activeWindow()
-                    last["continue"] = actual_time
-                    print("Ship continue")
-                    Space.go_to_continue()
-                    Space.if_surrender()     
-
-                
+                        print('Atualização da Página')
+                        last['refresh_page'] = actual_time      
+                        Space.refreshPage()  
+                else:
+                    last['refresh_page'] = actual_time
 
                 Log.logger(None, progress_indicator=True)
                 sys.stdout.flush()

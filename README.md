@@ -17,32 +17,71 @@ https://discord.gg/4gMA5Nhxrb
 ## Funções extras adicionadas
 
 - Suporte a multiplas contas no mesmo monitor
+
 - Todas funções para o bombcrypto
+
 ###### SpaceCrypto
-- Fazer login.
-- Refresh ao encontrar a mensagem de error
-- Colocar naves para trabalhar
-- Fazer surrender no boss que desejar.
+- Possivel alterar resolução por parametro para as pre-definidas:
+  #Selecione a resulução, disponiveis:
+    #1 - 1366x768
+    #2 - 1680x1050
+    #3 - 1920x1080
+    resolution: 1
 
-Resolução: 1920x1080 e 1600x900
+- Visualização de recompensas em arquivo de log "rewards.log":
+- Selecione naves por filtro de maior munição automaticamente por parametro "set_filter_max_ammo":
+- Otimização de performance na seleção de naves:
+- Otimização da velocidade do mouse por parametro "move_speed_mouse":
+- Otimização do tempo entre clicks por parametro "time_click":
+- Adicionado parametro para após surrender selecionar se quer ou não que va para tela de naves:
+- Refresh na pagina caso o bot não encontre nenhuma atividade após 10 minutos (possivel ser alterado tempo por parametro).:
+- Opção de enviar apenas naves comuns (em testes).:
+- Correções de bugs 
 
-1920x1080 precisa está com escala 100%
+# Perguntas frequentes (FAQ)
 
-1600x900 precisa está com escala 150%
+•    Serve para multi account?
+ 
+Sim, Multi account simutanios com BombCrypto e SpaceCrypto.
 
+•  Quantas naves preciso?
 
-Não pode ter Pasta ou Qualquer coisa que nao seja os jogos, nome com BombCrypto ou SpaceCrypto.
+A partir de uma você já consegue jogar.
 
+•  Roda em qual navegador?
 
-space:
-  ###### ###PT### Tempo para colocar as naves para trabalhar
-  ###### ###EN### Time to put the ships to work
-  refresh_ships: 35
-  ###### Surrender 3 to 12 need alter Images.
-  ###### Default 0, Won't surrender.
-  surrender_boss: 8
-  ###### Add ships 100% = True.
-  fight_100: True
+Recomendamos chrome, firefox, edge e brave (navegadores já testados e funcionando)
+
+•  É pago?
+
+Totalmente gratuito, porem é possivel dar aquela força para continuarmos produzindo e melhorando o bot para você.
+
+ Metamask wallet (BNB/SPG/BUSD/BCOIN): 0xa5e1412B4dBf4bE9Fb3f52b12aBFF7A78272B9b3
+
+•  Qual resolução recomendada?
+
+Recomendamos 1366x768 que é a mais estavel atualmente, porem estamos disponibilizando novas pastas com outros tipos de resolução.
+
+# Algumas dicas que podem ajudar SPACECRYPTO:
+
+ "[WARNING] Nenhuma acao encontrada"
+
+1 - Verifiquem o zoom do seu navegador ( Tem que estar em 100% )
+
+2 - Verifiquem a barra de favoritos se está ativa (sim isso pode diminuir a resolução do navegador), nossas imagens foram printadas na resolução 1366 x 768 com a barra de favoritos, então recomendamos para quem está com problema habilitar os favoritos e testar, para habilitar os favoritos de qualquer navegador use as teclas "crlt + shift + B"
+
+3 - Se você está usando a resolução da sua maquina conforme a pasta do bot deixe sempre o navegador no tamanho máximo da tela
+
+4 - Se você está usando a extensão "Window resizer" o tamanho do seu navegador diminuirá, mas preste atenção em deixa-lo totalmente à mostra na tua tela (não corte metade do navegador)
+
+5 - Caso nenhum item resolva tente deixar apenas um monitor ativo.
+
+Caso você identifique que o bot está funcionando porem para em algum ponto não clica em algum botão do jogo, faça o processo de recortar a imagem que não está sendo clicada e coloque-a dentro da pasta referente a sua resolução.
+
+90% dos casos que me chamam esses pontos resolvem, espero que te ajude, caso você executou todos esses passos sem sucesso chama a gente que vamos te ajudar.
+
+Arquivo de configuração (todas os parametros que podem ser utilizados como estrategia e configuração no jogo)
+
 
 # Instalação:
 
@@ -82,8 +121,6 @@ Você pode configurar algumas opções alterando o arquivo `config.yaml` na past
 
 - Você pode configurar a velocidade com que o mouse se move na tela antes da realização do click.
   > O valor deve ser de: `0.1` a `1`
-
-
 
 # How to works?
 The bot doesn't change any of the game's source code, it just takes a screenshot of the game's screen to find the buttons and simulates mouse movements.
