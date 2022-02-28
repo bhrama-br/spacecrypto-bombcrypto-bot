@@ -400,8 +400,9 @@ def refreshSpaceships(qtd):
     if ships_15_15():
         go_to_boss = True
         empty_scrolls_attempts = 0
-    while(empty_scrolls_attempts >0):    
-        is_repair()    
+    while(empty_scrolls_attempts >0):  
+        if st['repair_ships'] == True:  
+            is_repair()
         aux_ships = ships_clicks
         buttonsClicked = clickButtonsFight()          
         if aux_ships != ships_clicks:
