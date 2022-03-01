@@ -126,7 +126,7 @@ def runMultiAccount():
                 
                 Action.activeWindow()
                 
-                if actual_time - last["login"] > addRandomness(last['check_login'] * 60):                    
+                if actual_time - last["login"] > addRandomness(last['check_login'] * 10):                    
                     Action.activeWindow()
                     last["login"] = actual_time
                     if Space.login():
