@@ -490,8 +490,8 @@ def spaceships():
         return False
 
 def is_repair():
-    if len(positions(env.images_space['repair'], th['commom']))  > 0:
-        if clickBtn(env.images_space['btn-repair'],timeout = 5, threshold = th['commom']):
+    if len(positions(env.images_space['repair'], th['hard']))  > 0:
+        if clickBtn(env.images_space['btn-repair'],timeout = 5, threshold = th['hard']):
             clickBtn(env.images_space['btn-yes'],timeout = 5, threshold = th['commom'])
             return True
     return False
